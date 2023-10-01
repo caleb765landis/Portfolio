@@ -7,17 +7,17 @@ html {
 }
 
 /* color */
-.bg-primary {
+/* .bg-primary {
     background: #404e4f;
-}
+} */
 
-.bg-secondary {
+/* .bg-secondary {
     background: #ededed;
 }
 
 .bg-accent {
     background: #ffef84;
-}
+} */
 
 /* text */
 body {
@@ -25,9 +25,9 @@ body {
     @apply text-lg bg-primary;
 }
 
-.text-accent {
+/* .text-accent {
     color: #222222;
-}
+} */
 
 .mobile-nav {
     @apply block md:hidden fixed top-10 px-1 py-5 w-full h-full bg-primary duration-500 text-2xl font-bold;
@@ -38,5 +38,5 @@ nav li a {
 }
 
 nav li a:hover {
-    color: #ffef84;
+    @apply text-secondary;
 }

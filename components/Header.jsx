@@ -41,6 +41,9 @@ export default function Header() {
             <nav className={!toggle ? "mobile-nav left-[-100%]" : "mobile-nav left-0"}>
                 <ul className="flex flex-col">
                     <li>
+                        <Link href="/">Home</Link>
+                    </li>
+                    <li>
                         <Link href="/about/">About</Link>
                     </li>
                     <li>
@@ -51,6 +54,18 @@ export default function Header() {
                     </li>
                     <li>
                         <Link href="/resume/">Resume</Link>
+                    </li>
+                    <li>
+                        <Link href="/resume/">- Summary</Link>
+                    </li>
+                    <li>
+                        <Link href="/resume/">- Skills & Tools</Link>
+                    </li>
+                    <li>
+                        <Link href="/resume/">- Experience</Link>
+                    </li>
+                    <li>
+                        <Link href="/resume/">- Education</Link>
                     </li>
                 </ul>
             </nav>
