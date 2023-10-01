@@ -41,31 +41,31 @@ export default function Header() {
             <nav className={!toggle ? "mobile-nav left-[-100%]" : "mobile-nav left-0"}>
                 <ul className="flex flex-col">
                     <li>
-                        <Link href="/">Home</Link>
+                        <Link onClick={handleToggle} href="/">Home</Link>
                     </li>
                     <li>
-                        <Link href="/about/">About</Link>
+                        <Link onClick={handleToggle} href="/about/">About</Link>
                     </li>
                     <li>
-                        <Link href="/projects/">Projects</Link>
+                        <Link onClick={handleToggle}href="/projects/">Projects</Link>
                     </li>
                     <li>
-                        <Link href="/contact/">Contact</Link>
+                        <Link onClick={handleToggle} href="/contact/">Contact</Link>
                     </li>
                     <li>
-                        <Link href="/resume/">Resume</Link>
+                        <Link onClick={handleToggle} href="/resume/">Resume</Link>
                     </li>
                     <li>
-                        <Link href="/resume/">- Summary</Link>
+                        <Link onClick={handleToggle} href="/resume/">- Summary</Link>
                     </li>
                     <li>
-                        <Link href="/resume/">- Skills & Tools</Link>
+                        <Link onClick={handleToggle} href="/resume/">- Skills & Tools</Link>
                     </li>
                     <li>
-                        <Link href="/resume/">- Experience</Link>
+                        <Link onClick={handleToggle} href="/resume/">- Experience</Link>
                     </li>
                     <li>
-                        <Link href="/resume/">- Education</Link>
+                        <Link onClick={handleToggle} href="/resume/">- Education</Link>
                     </li>
                 </ul>
             </nav>
