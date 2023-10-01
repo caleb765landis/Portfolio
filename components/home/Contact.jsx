@@ -1,5 +1,9 @@
 export default function Contact() {
-    return <>
-        <h1>Contact</h1>
+    return (
+    <>
+        <div id="contact" className="h-screen bg-black">
+            <h1>Contact</h1>
+        </div>
     </>
+    );
 }

@@ -1,5 +1,9 @@
 export default function Projects() {
-    return <>
-        <h1>Header</h1>
-    </>
+    return (
+        <>
+        <div id="projects" className="h-screen bg-secondary text-accent">
+            <h1>Projects</h1>
+        </div>
+        </>
+    );
 }
