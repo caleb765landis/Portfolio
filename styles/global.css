@@ -34,7 +34,7 @@ body {
 }
 
 nav li a {
-    @apply px-4 py-5;
+    @apply px-4 py-2;
 }
 
 nav li a:hover {
