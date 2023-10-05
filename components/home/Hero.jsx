@@ -4,12 +4,16 @@ import Link from "next/link";
 export default function Hero() {
     return (
     <section id="hero" className="h-screen bg-gradient-to-br from-secondary from-50% to-slate-300 bg-blend-multiply text-primary p-10 grid md:grid-cols-2">
-        <div id="intro" className="flex items-start md:items-center md:justify-center order-last md:order-first">
-            <div className="flex flex-col">
+        <div id="intro" className="flex items-start md:items-center order-last md:order-first">
+            <div className="flex flex-col items-center">
                 <div>
-                    <p className="text-4xl">Howdy! My name is</p>
-                    <p className="text-8xl font-bold pb-1">Caleb Landis.</p>
-                    <p className="text-3xl pb-5">Welcome to my portfolio.</p>
+
+                <p className="pb-5"> 
+                    <span className="text-4xl">Howdy! My name is</span><br/>
+                    <span className="text-8xl font-bold pb-1">Caleb Landis.</span><br/>
+                    <span className="text-3xl">Welcome to my portfolio.</span>
+                </p>
+                
                 </div>
                 
                 <div className="pb-5">
