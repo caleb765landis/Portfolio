@@ -33,10 +33,10 @@ export default function Hero() {
 function IntroButtons() {
     return (
         <div className="pb-5">
-            <button type="button" className="text-white bg-primary hover:bg-accent focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700">
+            <button type="button" className="button-primary">
                 <Link href="/#about">Get to know me.</Link>
             </button>
-            <button type="button" className="text-primary bg-white border-2 border-primary hover:bg-accent focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700">
+            <button type="button" className="button-secondary">
                 <Link href="/contact/">Contact me.</Link>
             </button>
         </div>

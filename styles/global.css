@@ -19,15 +19,26 @@ html {
     background: #ffef84;
 } */
 
-/* text */
+/* .text-accent {
+    color: #222222;
+} */
+
 body {
     color: white;
     @apply text-lg bg-primary;
 }
 
-/* .text-accent {
-    color: #222222;
-} */
+.button-primary {
+    @apply text-white bg-primary border-2 border-primary hover:bg-accent focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700;
+}
+
+.button-secondary {
+    @apply text-primary bg-white border-2 border-primary hover:bg-secondary focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700;
+}
+
+.card {
+    @apply text-primary bg-white rounded-lg p-5
+}
 
 .mobile-nav {
     @apply block md:hidden fixed top-10 px-1 py-5 w-full h-full bg-primary duration-500 text-2xl font-bold;
