@@ -29,15 +29,13 @@ body {
 }
 
 .fill-img {
-    /* @apply flex justify-center items-center overflow-hidden shrink max-w-sm max-h-min; */
-
-    /* img { */
-        height: 500px;
-        width: auto;
-        aspect-ratio: 3/4;
-        object-fit: cover;
-        border-radius: 2rem;
-    /* } */
+    height: 750px;
+    /* height: 500px; */
+    /* height: 100%; */
+    width: auto;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    border-radius: 2rem;
     
 }
 
