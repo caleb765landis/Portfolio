@@ -1,31 +1,51 @@
 import Image from 'next/image'
+import AboutStyles from "../../styles/components/home/About.module.css"
 
 export default function About() {
     return (
         <>
-            <div id="about" className="p-20 flex flex-wrap justify-center">
-                <div className="flex justify-center text-5xl pb-10">About Me</div>
-                <div className="flex justify-center text-center text-xl pb-10 px-10">This is a description about me. I'm looking for this to be a multi-line description. Therefore, I need this section to have a lot fo sentences. Hopefully this final sentence will move to the next line.</div>
-
-
-                <div className="grid md:grid-rows-2 md:grid-cols-2 gap-5 m-3">
-                    <div id="aboutPic" className="row-span-2">
-                        <img
-                            priority
-                            src="/images/About_Photo.jpeg"
-                            alt="About Photo"
-                            className="fill-img"
-                        />
+            {/* About Me Section */}
+            <div id="about" className="min-h-screen md:p-20 p-10 flex flex-wrap justify-center">
+                {/* Introduction Section */}
+                <div className="content-center flex flex-col justify-center">
+                    <div className="flex justify-center text-5xl md:p-0 md:pb-10 pb-10"><h1>About Me</h1></div>
+                    <div className="flex justify-center md:text-center text-xl pb-10">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
                     </div>
+                </div> {/* End Intorduction Section */}
 
-                    <div className="card">
-                        Soft Skills
-                    </div>
-                    <div className="card">
-                        Hard Skills
-                    </div>
-                </div>
-            </div>
+                {/* Photo/Skills Grid Section */}
+                <div>
+                    {/* Grid Layout */}
+                    <div className="grid md:grid-rows-2 md:grid-cols-2 md:gap-5 gap-8">
+                        {/* Portrait Photo */}
+                        <div id="aboutPic" className="row-span-2">
+                            <img
+                                priority
+                                src="/images/About_Photo.jpeg"
+                                alt="About Photo"
+                                className={AboutStyles.portraitPhoto}
+                                />
+                        </div>
+
+                        {/* Skills Cards */}
+                        <div className="card">
+                            <h1 className="text-4xl pb-4">Soft Skills</h1>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
+                        </div>
+                        <div className="card">
+                            <h1 className="text-4xl pb-4">Hard Skills</h1>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
+                        </div>
+                    </div> {/* End Grid Layout */}
+                </div> {/* End Photo/Skills Section */}
+            </div> {/* End About Me section */}
         </>
     );
 }

@@ -1,0 +1,12 @@
+
+
+/* components/home/About.jsx */
+.portraitPhoto {
+    /* height: 750px; */
+    /* height: 500px; */
+    height: 100%;
+    width: auto;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    @apply rounded-2xl
+}

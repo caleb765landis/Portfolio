@@ -6,6 +6,11 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    color: white;
+    @apply text-lg bg-primary;
+}
+
 /* color */
 /* .bg-primary {
     background: #404e4f;
@@ -23,22 +28,6 @@ html {
     color: #222222;
 } */
 
-body {
-    color: white;
-    @apply text-lg bg-primary;
-}
-
-.fill-img {
-    height: 750px;
-    /* height: 500px; */
-    /* height: 100%; */
-    width: auto;
-    aspect-ratio: 3/4;
-    object-fit: cover;
-    border-radius: 2rem;
-    
-}
-
 .button-primary {
     @apply text-white bg-primary border-2 border-primary hover:bg-accent focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700;
 }
@@ -47,9 +36,8 @@ body {
     @apply text-primary bg-white border-2 border-primary hover:bg-secondary focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700;
 }
 
-.card {
-    @apply text-primary bg-white rounded-lg p-5
-}
+
+/* utitlity */
 
 .mobile-nav {
     @apply block md:hidden fixed top-10 px-1 py-5 w-full h-full bg-primary duration-500 text-2xl font-bold;
@@ -62,3 +50,18 @@ nav li a {
 nav li a:hover {
     @apply text-secondary;
 }
+
+.card {
+    @apply text-primary bg-white rounded-2xl p-5
+}
+
+/* components/home/About.jsx */
+/* .fill-img {
+    /* height: 750px; 
+    /* height: 500px; 
+    height: 100%;
+    width: auto;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    @apply rounded-2xl
+} */
