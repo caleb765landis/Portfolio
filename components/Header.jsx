@@ -17,10 +17,7 @@ export default function Header() {
             <nav className="hidden md:block">
                 <ul className="flex">
                     <li>
-                        <Link href="/">Home</Link>
-                    </li>
-                    <li>
-                        <Link href="/about/">About</Link>
+                        <Link href="/">About Me</Link>
                     </li>
                     <li>
                         <Link href="/projects/">Projects</Link>
@@ -41,10 +38,7 @@ export default function Header() {
             <nav className={!toggle ? "mobile-nav left-[-100%]" : "mobile-nav left-0"}>
                 <ul className="flex flex-col">
                     <li>
-                        <Link onClick={handleToggle} href="/">Home</Link>
-                    </li>
-                    <li>
-                        <Link onClick={handleToggle} href="/about/">About</Link>
+                        <Link onClick={handleToggle} href="/">About Me</Link>
                     </li>
                     <li>
                         <Link onClick={handleToggle}href="/projects/">Projects</Link>

@@ -28,6 +28,24 @@ body {
     @apply text-lg bg-primary;
 }
 
+.fill-img {
+    /* @apply flex justify-center items-center overflow-hidden shrink max-w-sm max-h-min; */
+
+    flex-basis: 50%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    position: relative;
+
+    /* img { */
+        height: 100%;
+        width: auto;
+        aspect-ratio: 3/4;
+        object-fit: cover;
+        border-radius: 2rem;
+    /* } */
+    
+}
+
 .button-primary {
     @apply text-white bg-primary border-2 border-primary hover:bg-accent focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700;
 }
