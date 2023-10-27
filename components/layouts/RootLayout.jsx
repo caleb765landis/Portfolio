@@ -7,14 +7,14 @@ export const metadata = {
     description: 'Personal Portfolio',
 }
 
-export default function Layout({children}) {
+export default function RootLayout({children}) {
     return (
         <>
         <Head>
             <title>{"Caleb Landis - Personal Portfolio"}</title>
         </Head>
-        <div className="bg-primary">
         {/* <div className="bg-gradient-to-br from-secondary from-30% to-blue-300"> */}
+        <div className="bg-primary">
             <Header />
             <main>{children}</main>
             <Footer />
