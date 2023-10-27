@@ -2,9 +2,24 @@ import Link from "next/link"
 import FeaturedProject from "../../elements/FeaturedProject.jsx"
 
 export default function Projects() {
-    let tecnologies1 = []
-    let tecnologies2 = []
-    let tecnologies3 = []
+    let tecnologies1 = [
+        ["", "Technology 1 Pill"], ["", "Technology 2"],
+        ["", "Technology 3"],      ["", "Technology 4"],
+        ["", "Technology 5"],      ["", "Technology 6 Pill"],
+        ["", "Technology 7 Pill"], ["", "Technology 8 Pill"]
+    ]
+    let tecnologies2 = [
+        ["", "Technology 1 Pill"], ["", "Technology 2"],
+        ["", "Technology 3"],      ["", "Technology 4"],
+        ["", "Technology 5"],      ["", "Technology 6 Pill"],
+        ["", "Technology 7 Pill"], ["", "Technology 8 Pill"]
+    ]
+    let tecnologies3 = [
+        ["", "Technology 1 Pill"], ["", "Technology 2"],
+        ["", "Technology 3"],      ["", "Technology 4"],
+        ["", "Technology 5"],      ["", "Technology 6 Pill"],
+        ["", "Technology 7 Pill"], ["", "Technology 8 Pill"]
+    ]
 
     return (
         <>

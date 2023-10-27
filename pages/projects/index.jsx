@@ -1,7 +1,11 @@
+import FeaturedProjects from "../../components/layouts/home/Projects"
+
 export default function Projects() {
     return (
         <>
-            <div className="content-center justify-center text-teal">Project</div>
+            <div>
+                <FeaturedProjects />
+            </div>
         </>
     );
 }
