@@ -55,7 +55,13 @@ nav li a:hover {
 
 /* other elements */
 .card {
-    @apply text-primary bg-white rounded-2xl p-5
+    @apply text-primary bg-white border-2 border-slate-300 rounded-2xl p-5
+}
+
+.test-img {
+    height: auto;
+    width: 100%;
+    aspect-ratio: 4/3;
 }
 
 /* components/home/About.jsx */

@@ -17,8 +17,6 @@ export default function Projects() {
     let tecnologies3 = [
         ["", "Technology 1 Pill"], ["", "Technology 2"],
         ["", "Technology 3"],      ["", "Technology 4"],
-        ["", "Technology 5"],      ["", "Technology 6 Pill"],
-        ["", "Technology 7 Pill"], ["", "Technology 8 Pill"]
     ]
 
     return (
@@ -32,9 +30,9 @@ export default function Projects() {
                 </div>
 
                 {/* Project Cards */}
-                <FeaturedProject title="Project 1 Title" description="This is my first project description." technologies={tecnologies1} link="https://github.com/caleb765landis"/>
-                <FeaturedProject title="Project 2 Title" description="This is my second project description." technologies={tecnologies2} link="https://github.com/caleb765landis"/>
-                <FeaturedProject title="Project 3 Title" description="This is my third project description." technologies={tecnologies3} link="https://github.com/caleb765landis"/>
+                <FeaturedProject title="Project 1 Title" description="This is my first project description." technologies={tecnologies1} link="https://github.com/caleb765landis" imgPath="/images/Profile_Photo.jpg"/>
+                <FeaturedProject title="Project 2 Title" description="This is my second project description." technologies={tecnologies2} link="https://github.com/caleb765landis" imgPath="/images/Profile_Photo.jpg"/>
+                <FeaturedProject title="Project 3 Title" description="This is my third project description." technologies={tecnologies3} link="https://github.com/caleb765landis" imgPath="/images/Profile_Photo.jpg"/>
             </div>
         </>
     );

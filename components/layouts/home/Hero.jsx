@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import PrimaryButton from "../../elements/PrimaryButton"
+import SecondaryButton from "../../elements/SecondaryButton"
 
 export default function Hero() {
     return (
@@ -18,12 +20,12 @@ export default function Hero() {
             <Image
                 priority
                 src="/images/profile.jpg"
-                className="rounded-full border-8 border-primary"
+                alt="Profile Photo"
+                className="rounded-full border-8 border-primary shadow-lg shadow-gray-300"
                 // height={288}
                 // width={288}
-                    height={400}
-                    width={400}
-                alt="Profile Photo"
+                height={400}
+                width={400}
             />
         </div>
     </section>
@@ -32,13 +34,9 @@ export default function Hero() {
 
 function IntroButtons() {
     return (
-        <div className="pb-5">
-            <button type="button" className="button-primary">
-                <Link href="/#about">Get to know me.</Link>
-            </button>
-            <button type="button" className="button-secondary">
-                <Link href="/contact/">Contact me.</Link>
-            </button>
+        <div className="flex flex-nowrap pb-5">
+            <PrimaryButton link="/#about" text="Get to know me."/>
+            <SecondaryButton link="/contact/" text="Contact me." />
         </div>
     )
 }

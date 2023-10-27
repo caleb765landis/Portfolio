@@ -9,7 +9,7 @@ export default function Header() {
     return (
         <>
         <header className="flex justify-between px-5 py-2 bg-primary sticky top-0 w-full z-10">
-            <a href="/" className="logo text-2xl font-bold">
+            <a href="../" className="logo text-2xl font-bold">
                 Caleb Landis
             </a>
 
@@ -17,19 +17,19 @@ export default function Header() {
             <nav className="hidden md:block">
                 <ul className="flex">
                     <li>
-                        <Link href="/">About Me</Link>
+                        <Link href="../">About Me</Link>
                     </li>
                     <li>
-                        <Link href="/projects/">Projects</Link>
+                        <Link href="../projects/">Projects</Link>
                     </li>
                     <li>
-                        <Link href="/contact/">Contact</Link>
+                        <Link href="../contact/">Contact</Link>
                     </li>
                     <li>
                         {/* <a href="#resume -link" target="_blank" rel="noreferrer">
                             Resume
                         </a> */}
-                        <Link href="/resume/">Resume</Link>
+                        <Link href="../resume/">Resume</Link>
                     </li>
                 </ul>
             </nav>
@@ -38,28 +38,28 @@ export default function Header() {
             <nav className={!toggle ? "mobile-nav left-[-100%]" : "mobile-nav left-0"}>
                 <ul className="flex flex-col">
                     <li>
-                        <Link onClick={handleToggle} href="/">About Me</Link>
+                        <Link onClick={handleToggle} href="../">About Me</Link>
                     </li>
                     <li>
-                        <Link onClick={handleToggle}href="/projects/">Projects</Link>
+                        <Link onClick={handleToggle}href="../projects/">Projects</Link>
                     </li>
                     <li>
-                        <Link onClick={handleToggle} href="/contact/">Contact</Link>
+                        <Link onClick={handleToggle} href="../contact/">Contact</Link>
                     </li>
                     <li>
-                        <Link onClick={handleToggle} href="/resume/">Resume</Link>
+                        <Link onClick={handleToggle} href="../resume/">Resume</Link>
                     </li>
                     <li>
-                        <Link onClick={handleToggle} href="/resume/">- Summary</Link>
+                        <Link onClick={handleToggle} href="../resume/">- Summary</Link>
                     </li>
                     <li>
-                        <Link onClick={handleToggle} href="/resume/">- Skills & Tools</Link>
+                        <Link onClick={handleToggle} href="../resume/">- Skills & Tools</Link>
                     </li>
                     <li>
-                        <Link onClick={handleToggle} href="/resume/">- Experience</Link>
+                        <Link onClick={handleToggle} href="../resume/">- Experience</Link>
                     </li>
                     <li>
-                        <Link onClick={handleToggle} href="/resume/">- Education</Link>
+                        <Link onClick={handleToggle} href="../resume/">- Education</Link>
                     </li>
                 </ul>
             </nav>
