@@ -19,19 +19,19 @@ export default function Footer() {
 
                 <div className="flex md:basis-1/3 justify-center pb-10">
                     <div className="flex flex-col">
-                        <h1 className="text-2xl font-semibold pb-4">Acknowledgments</h1>
+                        <h1 className="text-2xl font-semibold pb-4">Inspiration</h1>
                         
                         <h2 className="text-xl">Andrew Nelson</h2>
-                        <p className="text-xl font-thin pb-3">Inspiration for theme and layouts.</p>
+                        <p className="text-xl font-thin pb-3">Theme and layouts.</p>
                         
                         <h2 className="text-xl">Amrin</h2>
-                        <p className="text-xl font-thin pb-3">Inspiration for structuring and layouts.</p>
+                        <p className="text-xl font-thin pb-3">Structuring and layouts.</p>
                         
                         <h2 className="text-xl">Theodorus Clarence</h2>
-                        <p className="text-xl font-thin pb-3">Inspiration for future re-styling and colors.</p>
+                        <p className="text-xl font-thin pb-3">Future re-styling and colors.</p>
                         
                         <h2 className="text-xl">Enji Dev</h2>
-                        <p className="text-xl font-thin pb-3">Inspiration for future design features and future <span className="italic">Today I Learned</span> page.</p>
+                        <p className="text-xl font-thin pb-3">Future design features and future <span className="italic">Today I Learned</span> page.</p>
                     </div>
                 </div>
 

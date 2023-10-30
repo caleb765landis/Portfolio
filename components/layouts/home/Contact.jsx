@@ -5,7 +5,7 @@ export default function Contact() {
     return (
     <>
         {/* Contact Section */}
-        <div id="contact" className="bg-accent md:p-20 p-5 flex flex-wrap justify-center items-center md:grid-cols-2">
+        <div id="contact" className="bg-accent md:p-20 px-5 py-10 flex flex-wrap justify-center items-center md:grid-cols-2">
             {/* Heading Section */}
             <div className="flex flex-col md:basis-1/2 text-center p-5">
                 <h1 className="text-6xl font-semibold pb-10">Contact Me!</h1>

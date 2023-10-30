@@ -38,7 +38,7 @@ export default function Header() {
             <nav className={!toggle ? "mobile-nav left-[-100%]" : "mobile-nav left-0"}>
                 <ul className="flex flex-col">
                     <li>
-                        <Link onClick={handleToggle} href="../">About Me</Link>
+                        <Link onClick={handleToggle} href="../#about">About Me</Link>
                     </li>
                     <li>
                         <Link onClick={handleToggle}href="../projects/">Projects</Link>
