@@ -8,7 +8,7 @@ html {
 
 body {
     color: white;
-    @apply text-lg bg-primary;
+    @apply text-lg antialiased bg-primary;
 }
 
 /* color */

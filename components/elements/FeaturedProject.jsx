@@ -1,15 +1,16 @@
 import Link from "next/link"
+import clsx from 'clsx'
 import PrimaryButton from "./PrimaryButton"
 import TechnologyPill from "./TechnologyPill"
 
 // TODO: Add ability to flip image and project info
-export default function FeaturedProject({ title, description, technologies, link, imgPath}) {
+export default function FeaturedProject({ title, description, technologies, link, imgPath, flip=false}) {
     return (
         <>
             {/* Featured Project Card */}
             <div className="card border-slate-300 border-2 flex w-full min-h-fit mb-10">
                 {/* Grid Layout */}
-                <div className="flex md:flex-nowrap flex-wrap-reverse gap-6">
+                <div className="flex md:flex-nowrap flex-wrap-reverse items-center gap-6">
                     {/* Project Description */}
                     <div className="flex flex-col md:basis-1/2">
                         <h1 className="pb-3 text-3xl font-semibold">{title ? title : "Title"}</h1>
@@ -34,7 +35,12 @@ export default function FeaturedProject({ title, description, technologies, link
                     </div>
 
                     {/* Project Image */}
-                    <div className="flex justify-center items-center md:basis-1/2">
+                    <div className={clsx(
+                        "flex justify-center items-center md:basis-1/2",
+                        {
+                            "order-first": flip === true
+                        },
+                    )}>
                         <img
                             priority
                             src={imgPath}
