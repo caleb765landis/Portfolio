@@ -39,7 +39,7 @@ export default function Projects() {
                     <FeaturedProject title="Project 3 Title" description="This is my third project description." technologies={tecnologies3} link="https://github.com/caleb765landis" imgPath="/images/Profile_Photo.jpg"/>
                 </div>
 
-                <div className="flex flex-col items-end"><Link href="../../projects/" className="text-accentSecondary hover:text-accent">See All Projects -&gt;</Link></div>
+                <div className="flex flex-col items-end"><Link href="../../projects/" className="text-accentSecondary hover:text-accent">See All Projects. -&gt;</Link></div>
             </div>
         </>
     );

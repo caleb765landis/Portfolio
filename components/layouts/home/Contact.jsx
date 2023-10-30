@@ -1,3 +1,6 @@
+import PrimaryButton from "../../elements/PrimaryButton"
+import SecondaryButton from "../../elements/SecondaryButton"
+
 export default function Contact() {
     return (
     <>
@@ -11,6 +14,7 @@ export default function Contact() {
                 </p>
                 <br/><hr/><br/>
                 <p></p>
+                <p className="text-xl pb-5">See my resume. -&gt;</p>
                 <div className="flex justify-center">
                     <span className="px-5">LinkedIn </span>
                     <span className="px-5">GithHub </span>
@@ -36,10 +40,15 @@ export default function Contact() {
                         </label>
 
                         {/* Message */}
-                        <label className="block pb-2">
+                        <label className="block pb-4">
                             <span className="font-semibold">Message</span>
                                 <textarea placeholder="Message" className="form-textarea block w-full rounded-md border-2 border-gray-300 shadow-sm focus:border-accentSecondary p-2 text-lg"></textarea>
                         </label>
+
+                        <div className="flex flex-row">
+                            <SecondaryButton link="/" text="Reset" />
+                            <PrimaryButton link="/" text="Submit" />
+                        </div>
                     </form>
                 </div>
             </div>

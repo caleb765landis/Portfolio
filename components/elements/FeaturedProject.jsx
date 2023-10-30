@@ -29,7 +29,7 @@ export default function FeaturedProject({ title, description, technologies, link
 
                         {/* TODO: Add GitHub Icon */}
                         {/* View on GitHub Button */}
-                        <PrimaryButton link={link} text="View on GitHub" />
+                        <PrimaryButton link={link} text="View on GitHub. -&gt;" />
 
                         {/* TODO: "View Site" button */}
                     </div>

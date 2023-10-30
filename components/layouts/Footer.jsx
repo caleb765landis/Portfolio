@@ -3,10 +3,12 @@ export default function Footer() {
         {/* Footer Section */}
         <div className="p-10">
             {/* Content */}
-            <div className="flex flex-col md:flex-row justify-center items-center md:items-start">
-                <div className="flex md:basis-1/3">
-                    <div className="flex flex-col items-center pb-10">
-                        <h1 className="text-xl font-semibold pb-4">Contact</h1>
+            <div className="flex flex-col md:flex-row items-center md:items-start text-center">
+                <div className="flex md:basis-1/3 justify-center pb-10">
+                    <div className="flex flex-col items-center">
+                        <h1 className="text-2xl font-semibold pb-4">Contact</h1>
+                        <h2 className="text-xl pb-2">See my resume. -&gt;</h2>
+                        <h2 className="text-xl pb-2"><span className="font-semibold">Email:</span> caleb765landis@gmail.com</h2>
                         <div className="flex-row">
                             <span className="px-2">LinkedIn</span>
                             <span className="px-2">GitHub</span>
@@ -15,15 +17,28 @@ export default function Footer() {
                     </div>
                 </div>
 
-                <div className="flex md:basis-1/3 pb-10">
+                <div className="flex md:basis-1/3 justify-center pb-10">
                     <div className="flex flex-col">
-                        <h1 className="text-xl font-semibold pb-4">Acknowledgments</h1>
+                        <h1 className="text-2xl font-semibold pb-4">Acknowledgments</h1>
+                        
+                        <h2 className="text-xl">Andrew Nelson</h2>
+                        <p className="text-xl font-thin pb-3">Inspiration for theme and layouts.</p>
+                        
+                        <h2 className="text-xl">Amrin</h2>
+                        <p className="text-xl font-thin pb-3">Inspiration for structuring and layouts.</p>
+                        
+                        <h2 className="text-xl">Theodorus Clarence</h2>
+                        <p className="text-xl font-thin pb-3">Inspiration for future re-styling and colors.</p>
+                        
+                        <h2 className="text-xl">Enji Dev</h2>
+                        <p className="text-xl font-thin pb-3">Inspiration for future design features and future <span className="italic">Today I Learned</span> page.</p>
                     </div>
                 </div>
 
-                <div className="flex pb-10">
+                <div className="flex md:basis-1/3 justify-center pb-10">
                     <div className="flex flex-col">
-                        <h1 className="text-xl font-semibold pb-4">Source Code</h1>
+                        <h1 className="text-2xl font-semibold pb-4">Source Code</h1>
+                        <h2 className="text-xl pb-2">View on GitHub. -&gt;</h2>
                     </div>
                 </div>
             </div>
