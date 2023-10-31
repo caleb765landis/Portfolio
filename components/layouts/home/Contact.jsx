@@ -1,7 +1,7 @@
 import PrimaryButton from "../../elements/PrimaryButton"
 import SecondaryButton from "../../elements/SecondaryButton"
 
-export default function Contact() {
+export default function Contact({ onHome=true }) {
     return (
     <>
         {/* Contact Section */}
@@ -26,28 +26,35 @@ export default function Contact() {
                 {/* Form Container */}
                 <div className="flex flex-col grow p-4 rounded-xl text-primary bg-slate-200 border-2 border-white shadow-lg shadow-gray-700">
                     <h1 className="text-3xl font-semibold pb-5">Send me a message.</h1>
-                    <form className="text-xl">
+
+                    {/* Use this form for sending actual email submissions. */}
+                    {/* Currently has a limit of 50 form submissions each month, so I'll use the other form tag until website is ready to publish. */}
+                    {/* <form className="text-xl" action="https://getform.io/f/f28cd6d6-be8e-4fa6-9910-39bf349fe147" method="POST"> */}
+
+                    <form className="text-xl" action="mailto:caleb765landis@gmail.com" method="post" encType="text/plain">
                         {/* Full Name */}
                         <label className="block pb-2">
                             <span className="font-semibold">Full Name</span>
-                                <input type="text" placeholder="John Doe" className="form-input block w-full rounded-md border-2 border-gray-300 shadow-sm focus:border-accentSecondary p-2 text-lg"></input>
+                                <input required type="text" name="Full Name" placeholder="John Doe" className="form-input block w-full rounded-md border-2 border-gray-300 shadow-sm focus:border-accentSecondary p-2 text-lg"></input>
                         </label>
 
                         {/* Email Address */}
                         <label className="block pb-2">
                             <span className="font-semibold">Email</span>
-                                <input type="email" placeholder="john@example.com" className="form-input block w-full rounded-md border-2 border-gray-300 shadow-sm focus:border-accentSecondary p-2 text-lg"></input>
+                                <input required type="email" name="Email" placeholder="john@example.com" className="form-input block w-full rounded-md border-2 border-gray-300 shadow-sm focus:border-accentSecondary p-2 text-lg"></input>
                         </label>
 
                         {/* Message */}
                         <label className="block pb-4">
                             <span className="font-semibold">Message</span>
-                                <textarea placeholder="Message" className="form-textarea block w-full rounded-md border-2 border-gray-300 shadow-sm focus:border-accentSecondary p-2 text-lg"></textarea>
+                                <textarea required name="Message" placeholder="Message" className="form-textarea block w-full rounded-md border-2 border-gray-300 shadow-sm focus:border-accentSecondary p-2 text-lg"></textarea>
                         </label>
 
+                        {/* <button type="submit">Submit</button> */}
+
                         <div className="flex flex-row">
-                            <SecondaryButton link="/" text="Reset" />
-                            <PrimaryButton link="/" text="Submit" />
+                            <SecondaryButton text="Reset" type="reset" link={onHome ? "/#contact" : "/contact"}/>
+                            <PrimaryButton text="Submit" type="submit" link={onHome ? "/#contact" : "/contact"}/>
                         </div>
                     </form>
                 </div>

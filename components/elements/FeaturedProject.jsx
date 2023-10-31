@@ -22,7 +22,7 @@ export default function FeaturedProject({ title, description, technologies, link
                             <div className="flex flex-wrap">
                                 {technologies.map((technology) => (
                                     // map technology names
-                                    <TechnologyPill image={technology[0]} name={technology[1]} />
+                                    <TechnologyPill image={technology[0]} key={technology[1]} name={technology[1]} />
                                     ))}
                             </div>
                         </div>
@@ -42,7 +42,6 @@ export default function FeaturedProject({ title, description, technologies, link
                         },
                     )}>
                         <img
-                            priority
                             src={imgPath}
                             alt="Profile Photo"
                             className="test-img rounded-lg border-2 border-slate-300 shadow-lg shadow-gray-300">

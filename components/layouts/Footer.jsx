@@ -42,6 +42,12 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
+
+            <hr/>
+
+            <div className="flex justify-center p-5">
+                <p>&copy; 2023 Caleb Landis</p>
+            </div>
         </div>
     </>
 }

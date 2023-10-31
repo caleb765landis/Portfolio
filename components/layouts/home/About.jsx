@@ -23,7 +23,6 @@ export default function About() {
                         {/* Portrait Photo */}
                         <div id="aboutPic" className="row-span-2">
                             <img
-                                priority
                                 src="/images/About_Photo.jpeg"
                                 alt="About Photo"
                                 className={AboutStyles.portraitPhoto}
