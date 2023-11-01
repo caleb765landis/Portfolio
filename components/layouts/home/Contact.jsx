@@ -1,4 +1,8 @@
 import Link from 'next/link'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+
 import { copyToClipboard } from '@/utils/copyToClipboard'
 import PrimaryButton from "../../elements/PrimaryButton"
 import SecondaryButton from "../../elements/SecondaryButton"
@@ -14,14 +18,24 @@ export default function Contact({ onHome=true }) {
                 <p>
                     I am curently looking for a full-time Junior Developer position. Please feel free to reach out for an interview or just to connect!
                 </p>
+                <br/>
+                <p className="text-xl pb-5 hover:underline"><Link href="/resume/">See my resume. -&gt;</Link></p>
                 <br/><hr/><br/>
                 <p></p>
-                <p className="text-xl pb-5 hover:underline"><Link href="/resume/">See my resume. -&gt;</Link></p>
 
+                {/* Icons */}
                 <div className="flex justify-center">
-                    <span className="px-5">LinkedIn </span>
-                    <span className="px-5">GithHub </span>
-                        <span className="px-5" onClick={() => copyToClipboard("caleb765landis@gmail.com")}>Email</span>
+                    <a href="https://linkedin.com/in/caleb765landis/">
+                        <FontAwesomeIcon icon={faLinkedin} size="3x" className="px-5 hover:text-accentSecondary" />
+                    </a>
+
+                    <a href="https://github.com/caleb765landis">
+                        <FontAwesomeIcon icon={faGithub} size="3x" className="px-5 hover:text-accentSecondary" />
+                    </a>
+
+                    <a href="/" className="px-5" onClick={() => copyToClipboard("caleb765landis@gmail.com")}>
+                        <FontAwesomeIcon icon={faEnvelope} size="3x hover:text-accentSecondary"/>
+                    </a>
                 </div>
             </div>
             {/* Contact Form Section*/}

@@ -2,6 +2,9 @@ import Head from "next/head";
 import { Toaster } from 'react-hot-toast';
 import Header from "./Header";
 import Footer from "./Footer";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
+config.autoAddCss = false;
 
 export const metadata = {
     title: 'Caleb Landis',

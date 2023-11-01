@@ -64,7 +64,7 @@ export default function Footer() {
                 <div className="flex md:basis-1/3 justify-center pb-10">
                     <div className="flex flex-col">
                         <h1 className="text-2xl font-semibold pb-4">Source Code</h1>
-                        <h2 className="text-xl pb-2 hover:underline"><Link href="http://www.github.com/caleb765landis">View on GitHub. -&gt;</Link></h2>
+                        <h2 className="text-xl pb-2 hover:underline"><Link href="http://www.github.com/caleb765landis/Portfolio/">View on GitHub. -&gt;</Link></h2>
                     </div>
                 </div>
             </div>
