@@ -9,9 +9,9 @@ export default function Header() {
     return (
         <>
         <header className="flex justify-between items-center px-5 py-2 bg-primary sticky top-0 w-full z-10">
-            <a href="../" className="logo text-2xl font-bold">
+            <Link href="../" className="logo text-2xl font-bold">
                 Caleb Landis
-            </a>
+            </Link>
 
             {/* Desktop Nav */}
             <nav className="hidden md:block">

@@ -1,4 +1,5 @@
-import Head from "next/head"
+import Head from "next/head";
+import { Toaster } from 'react-hot-toast';
 import Header from "./Header";
 import Footer from "./Footer";
 
@@ -15,6 +16,7 @@ export default function RootLayout({children}) {
         </Head>
         {/* <div className="bg-gradient-to-br from-secondary from-30% to-blue-300"> */}
         <div className="bg-primary">
+            <Toaster />
             <Header />
             <main>{children}</main>
             <Footer />

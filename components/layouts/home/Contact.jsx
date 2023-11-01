@@ -1,3 +1,5 @@
+import Link from 'next/link'
+import { copyToClipboard } from '@/utils/copyToClipboard'
 import PrimaryButton from "../../elements/PrimaryButton"
 import SecondaryButton from "../../elements/SecondaryButton"
 
@@ -14,11 +16,12 @@ export default function Contact({ onHome=true }) {
                 </p>
                 <br/><hr/><br/>
                 <p></p>
-                <p className="text-xl pb-5">See my resume. -&gt;</p>
+                <p className="text-xl pb-5 hover:underline"><Link href="/resume/">See my resume. -&gt;</Link></p>
+
                 <div className="flex justify-center">
                     <span className="px-5">LinkedIn </span>
                     <span className="px-5">GithHub </span>
-                    <span className="px-5">Email</span>
+                        <span className="px-5" onClick={() => copyToClipboard("caleb765landis@gmail.com")}>Email</span>
                 </div>
             </div>
             {/* Contact Form Section*/}
