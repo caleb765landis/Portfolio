@@ -23,7 +23,7 @@ export default function Resume() {
                         className="rounded-lg hidden md:block"
                         height={1100}
                         width={850}
-                    ></Image>
+                    />
 
                     {/* Small Screen: Image Shown, Medium+ Screen: Image Hidden */}
                     <Image
@@ -33,7 +33,7 @@ export default function Resume() {
                         className="rounded-lg md:hidden block"
                         height={550}
                         width={425}
-                    ></Image>
+                    />
                 </div>
             </div>
         </>

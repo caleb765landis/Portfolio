@@ -16,16 +16,26 @@ export default function Hero() {
             <IntroButtons />
         </div>
         
+        {/* Hero Photo */}
+        {/* Preloads multiple sizes. */}
         <div id="profilePic" className="flex justify-center items-center">
+            {/* Small Screen: Image Shown, Medium+ Screen: Image Hidden */}
             <Image
                 priority
                 src="/images/profile.jpg"
                 alt="Profile Photo"
-                className="rounded-full border-8 border-primary shadow-lg shadow-gray-300"
-                // height={288}
-                // width={288}
+                className="block md:hidden rounded-full border-8 border-primary shadow-lg shadow-gray-300"
                 height={400}
                 width={400}
+            />
+            {/* Medium+ Screen: Image Shown, Small Screen: Image Hidden */}
+            <Image
+                priority
+                src="/images/profile.jpg"
+                alt="Profile Photo"
+                className="hidden md:block rounded-full border-8 border-primary shadow-lg shadow-gray-300"
+                height={500}
+                width={500}
             />
         </div>
     </section>
