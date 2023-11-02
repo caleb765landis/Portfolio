@@ -122,6 +122,10 @@ export default function Footer() {
 									/>
 								</Link>
 							</h2>
+							<p className="text-lg font-thin pb-2">
+								Built with Next.js and Tailwind CSS. Coded in Visual Studio Code
+								and deployed on GitHub Pages.
+							</p>
 						</div>
 					</div>
 				</div>

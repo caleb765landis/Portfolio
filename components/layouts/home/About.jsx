@@ -16,13 +16,14 @@ export default function About() {
 					</div>
 					<div className="flex justify-center md:text-center text-xl pb-10">
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-							eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-							enim ad minim veniam, quis nostrud exercitation ullamco laboris
-							nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-							reprehenderit in voluptate velit esse cillum dolore eu fugiat
-							nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-							sunt in culpa qui officia deserunt mollit anim id est laborum.
+							I just recently graduated from IUPUI with a B.A. in Applied
+							Computer Science and a minor in Game Design & Development. I've
+							spent time as a lab instructor for the first two introductory
+							computer science classes at IUPUI, and I've also graded for a
+							fundamental web development course as well. I love programming and
+							creating fun projects, and I really enjoy teaching others how to
+							do the same. I am excited to continue growing my skills and begin
+							my career as a developer!
 						</p>
 					</div>
 				</div>{" "}
@@ -42,27 +43,33 @@ export default function About() {
 
 						{/* Skills Cards */}
 						<div className="card shadow-lg shadow-gray-700">
-							<h1 className="text-4xl font-semibold pb-4">Soft Skills</h1>
+							<h1 className="text-4xl font-semibold pb-4">
+								Soft skills that matter.
+							</h1>
 							<p>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-								eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-								enim ad minim veniam, quis nostrud exercitation ullamco laboris
-								nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-								in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-								nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-								sunt in culpa qui officia deserunt mollit anim id est laborum.
+								Even though I've completed my degree, I still consider myself a
+								student. I am always learning new concepts and technologies, and
+								I can pick up new skills pretty quickly. I've worked on many
+								projects individually and in group settings. When collaboriting
+								with others, I lead by emphasizing strong teamwork, thoughtful
+								organization, and effective communication strategies. I can
+								solve complicated problems both in software and in the
+								workplace.
 							</p>
 						</div>
 						<div className="card shadow-lg shadow-gray-700">
-							<h1 className="text-4xl font-semibold pb-4">Hard Skills</h1>
+							<h1 className="text-4xl font-semibold pb-4">
+								Hard skills that execute.
+							</h1>
 							<p>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-								eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-								enim ad minim veniam, quis nostrud exercitation ullamco laboris
-								nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-								in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-								nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-								sunt in culpa qui officia deserunt mollit anim id est laborum.
+								I've explored all different aspects of software developement. I
+								have implemented many data structures and algorithms with C++
+								and Python, designed large-scale relational databases and
+								queries with SQL, created a mobile application and API backend
+								with Swift, programmed fun games with Unity and Godot, and
+								engineered web applications with HTML, CSS, JavaScript, and PHP.
+								I always aim to apply appropriate design patterns and best
+								practices.
 							</p>
 						</div>
 					</div>{" "}
