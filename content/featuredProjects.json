@@ -1,0 +1,74 @@
+[
+    {
+        "title": "Title 1",
+        "description": "This is my first project description.",
+        "technologies": [
+            {"icon": "", "name": "Technology Pill 1"},
+            {"icon": "", "name": "Technology 2"},
+            {"icon": "", "name": "Technology 3"},
+            {"icon": "", "name": "Technology 4"},
+            {"icon": "", "name": "Technology 5"},
+            {"icon": "", "name": "Technology 6 Pill"},
+            {"icon": "", "name": "Technology 7 Pill"},
+            {"icon": "", "name": "Technology 8 Pill"}
+        ],
+        "repoLink": "https://github.com/caleb765landis",
+        "images": { 
+            "small": null,
+            "medium": {"imgPath": "/images/Profile_Photo.jpg", "alt": "Profile Photo"}
+        },
+        "flip": false
+    },
+    {
+        "title": "Title 2",
+        "description": "This is my second project description.",
+        "technologies": [
+            {"icon": "", "name": "Technology Pill 1"},
+            {"icon": "", "name": "Technology 2"},
+            {"icon": "", "name": "Technology 3"},
+            {"icon": "", "name": "Technology 4"},
+            {"icon": "", "name": "Technology 5"},
+            {"icon": "", "name": "Technology 6 Pill"},
+            {"icon": "", "name": "Technology 7 Pill"},
+            {"icon": "", "name": "Technology 8 Pill"}
+        ],
+        "repoLink": "https://github.com/caleb765landis",
+        "images": { 
+            "small": null,
+            "medium": {"imgPath": "/images/Profile_Photo.jpg", "alt": "Profile Photo"}
+        },
+        "flip": true
+    },
+    {
+        "title": "Title 3",
+        "description": "This is my third project description.",
+        "technologies": [
+            {"icon": "", "name": "Technology Pill 1"},
+            {"icon": "", "name": "Technology 2"},
+            {"icon": "", "name": "Technology 3"},
+            {"icon": "", "name": "Technology 4"}
+        ],
+        "repoLink": "https://github.com/caleb765landis",
+        "images": { 
+            "small": null,
+            "medium": {"imgPath": "/images/Profile_Photo.jpg", "alt": "Profile Photo"}
+        },
+        "flip": false
+    },
+    {
+        "title": "Title 4",
+        "description": "This is my fourth project description.",
+        "technologies": [
+            {"icon": "", "name": "Technology Pill 1"},
+            {"icon": "", "name": "Technology 2"},
+            {"icon": "", "name": "Technology 3"},
+            {"icon": "", "name": "Technology 4"}
+        ],
+        "repoLink": "https://github.com/caleb765landis",
+        "images": { 
+            "small": null,
+            "medium": {"imgPath": "/images/Profile_Photo.jpg", "alt": "Profile Photo"}
+        },
+        "flip": true
+    }
+]

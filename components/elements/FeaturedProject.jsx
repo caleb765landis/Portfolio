@@ -34,9 +34,9 @@ export default function FeaturedProject({
 								{technologies.map((technology) => (
 									// map technology names
 									<TechnologyPill
-										image={technology[0]}
-										key={technology[1]}
-										name={technology[1]}
+										image={technology.icon}
+										key={technology.name}
+										name={technology.name}
 									/>
 								))}
 							</div>
