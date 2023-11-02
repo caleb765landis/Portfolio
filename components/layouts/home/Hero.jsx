@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import PrimaryButton from "../../elements/PrimaryButton";
 import SecondaryButton from "../../elements/SecondaryButton";
 import * as IconImports from "/utils/iconImports";

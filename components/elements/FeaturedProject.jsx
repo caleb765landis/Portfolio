@@ -4,7 +4,6 @@ import PrimaryButton from "./PrimaryButton";
 import TechnologyPill from "./TechnologyPill";
 import * as IconImports from "/utils/iconImports";
 
-// TODO: Add ability to flip image and project info
 export default function FeaturedProject({
 	title,
 	description,
@@ -43,7 +42,6 @@ export default function FeaturedProject({
 							</div>
 						</div>
 
-						{/* TODO: Add GitHub Icon */}
 						{/* View on GitHub Button */}
 						<PrimaryButton
 							link={link}
