@@ -34,6 +34,7 @@ export default function Projects() {
 					</div>
 				</div>
 
+				{/* TODO: Add key and names */}
 				{/* Featured Project Cards */}
 				<div className="flex flex-col items-center">
 					{content.map((data, index) => {

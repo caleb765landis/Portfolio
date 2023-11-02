@@ -1,38 +1,37 @@
 [
     {
-        "title": "Title 1",
-        "description": "This is my first project description.",
+        "title": "Capstone",
+        "description": "My IUPUI Computer Science Capstone Project. A full-stack iOS application that organizes your video game library through different lists.",
         "technologies": [
-            {"icon": "", "name": "Technology Pill 1"},
-            {"icon": "", "name": "Technology 2"},
-            {"icon": "", "name": "Technology 3"},
-            {"icon": "", "name": "Technology 4"},
-            {"icon": "", "name": "Technology 5"},
-            {"icon": "", "name": "Technology 6 Pill"},
-            {"icon": "", "name": "Technology 7 Pill"},
-            {"icon": "", "name": "Technology 8 Pill"}
+            {"icon": "", "name": "Swift"},
+            {"icon": "", "name": "SwiftUI"},
+            {"icon": "", "name": "Vapor"},
+            {"icon": "", "name": "Fluent ORM"},
+            {"icon": "", "name": "REST"},
+            {"icon": "", "name": "MongoDB"},
+            {"icon": "", "name": "Docker"},
+            {"icon": "", "name": "IGDB API"},
+            {"icon": "", "name": "Twitch API Authorization"},
+            {"icon": "", "name": "Postman"},
+            {"icon": "", "name": "Git"}
         ],
-        "repoLink": "https://github.com/caleb765landis",
+        "repoLink": "https://github.com/caleb765landis/Capstone",
         "images": { 
             "small": null,
-            "medium": {"imgPath": "/images/Profile_Photo.jpg", "alt": "Profile Photo"}
+            "medium": {"imgPath": "/images/Capstone.png", "alt": "Capstone Project Photo"}
         },
         "flip": false
     },
     {
-        "title": "Title 2",
-        "description": "This is my second project description.",
+        "title": "Wicked West",
+        "description": "A top-down shooter developed in the Unity 3D game engine.",
         "technologies": [
-            {"icon": "", "name": "Technology Pill 1"},
-            {"icon": "", "name": "Technology 2"},
-            {"icon": "", "name": "Technology 3"},
-            {"icon": "", "name": "Technology 4"},
-            {"icon": "", "name": "Technology 5"},
-            {"icon": "", "name": "Technology 6 Pill"},
-            {"icon": "", "name": "Technology 7 Pill"},
-            {"icon": "", "name": "Technology 8 Pill"}
+            {"icon": "", "name": "Unity 3D"},
+            {"icon": "", "name": "C#"},
+            {"icon": "", "name": "Trello"},
+            {"icon": "", "name": "Git"}
         ],
-        "repoLink": "https://github.com/caleb765landis",
+        "repoLink": "https://github.com/caleb765landis/Wicked-West",
         "images": { 
             "small": null,
             "medium": {"imgPath": "/images/Profile_Photo.jpg", "alt": "Profile Photo"}
@@ -40,15 +39,14 @@
         "flip": true
     },
     {
-        "title": "Title 3",
-        "description": "This is my third project description.",
+        "title": "Over-Engineered Calculator",
+        "description": "A command-line calculator application in C++ that demonstrates 8 crucial software design patterns.",
         "technologies": [
-            {"icon": "", "name": "Technology Pill 1"},
-            {"icon": "", "name": "Technology 2"},
-            {"icon": "", "name": "Technology 3"},
-            {"icon": "", "name": "Technology 4"}
+            {"icon": "", "name": "C++"},
+            {"icon": "", "name": "Makefile Project Creator"},
+            {"icon": "", "name": "Git"}
         ],
-        "repoLink": "https://github.com/caleb765landis",
+        "repoLink": "https://github.com/caleb765landis/Software-Design-Pattern-Calculator",
         "images": { 
             "small": null,
             "medium": {"imgPath": "/images/Profile_Photo.jpg", "alt": "Profile Photo"}
@@ -56,13 +54,14 @@
         "flip": false
     },
     {
-        "title": "Title 4",
-        "description": "This is my fourth project description.",
+        "title": "Portfolio Website",
+        "description": "My personal portfolio website built with Next.js and styled with Tailwind CSS.",
         "technologies": [
-            {"icon": "", "name": "Technology Pill 1"},
-            {"icon": "", "name": "Technology 2"},
-            {"icon": "", "name": "Technology 3"},
-            {"icon": "", "name": "Technology 4"}
+            {"icon": "", "name": "Next.js"},
+            {"icon": "", "name": "Tailwind CSS"},
+            {"icon": "", "name": "Node.js"},
+            {"icon": "", "name": "npm"},
+            {"icon": "", "name": "Git"}
         ],
         "repoLink": "https://github.com/caleb765landis",
         "images": { 

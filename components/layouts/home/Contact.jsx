@@ -52,8 +52,7 @@ export default function Contact({onHome = true}) {
 							/>
 						</a>
 
-						<a
-							href="/"
+						<div
 							className="px-5"
 							onClick={() => copyToClipboard("caleb765landis@gmail.com")}
 						>
@@ -62,7 +61,7 @@ export default function Contact({onHome = true}) {
 								size="2x"
 								className="hover:text-accentSecondary"
 							/>
-						</a>
+						</div>
 					</div>
 				</div>
 				{/* Contact Form Section*/}

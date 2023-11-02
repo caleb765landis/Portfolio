@@ -58,7 +58,7 @@ nav li a:hover {
     @apply text-primary bg-white border-2 border-slate-300 rounded-2xl p-5
 }
 
-.test-img {
+.project-img {
     height: auto;
     width: 100%;
     aspect-ratio: 4/3;

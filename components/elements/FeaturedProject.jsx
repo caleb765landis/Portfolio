@@ -61,7 +61,7 @@ export default function FeaturedProject({
 						<img
 							src={imgPath}
 							alt="Profile Photo"
-							className="test-img rounded-lg border-2 border-slate-300 shadow-lg shadow-gray-300"
+							className="project-img rounded-lg border-2 border-slate-300 shadow-lg shadow-gray-300"
 						></img>
 					</div>
 				</div>
