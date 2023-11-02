@@ -19,7 +19,7 @@ export default function Footer() {
 									See my resume.
 									<IconImports.FontAwesomeIcon
 										icon={IconImports.faFileLines}
-										size="lg"
+										size=""
 										className="pl-2"
 									/>
 								</Link>
@@ -31,7 +31,7 @@ export default function Footer() {
 							</h2>
 
 							{/* Icons */}
-							<div className="">
+							<div className="flex flex-row">
 								<a href="https://linkedin.com/in/caleb765landis/">
 									<IconImports.FontAwesomeIcon
 										icon={IconImports.faLinkedin}
@@ -48,8 +48,7 @@ export default function Footer() {
 									/>
 								</a>
 
-								<a
-									href="/"
+								<div
 									className="px-5"
 									onClick={() => copyToClipboard("caleb765landis@gmail.com")}
 								>
@@ -58,7 +57,7 @@ export default function Footer() {
 										size="2x"
 										className="hover:text-accentSecondary"
 									/>
-								</a>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -115,7 +114,12 @@ export default function Footer() {
 							<h1 className="text-2xl font-semibold pb-4">Source Code</h1>
 							<h2 className="text-xl pb-2 hover:underline">
 								<Link href="http://www.github.com/caleb765landis/Portfolio/">
-									View on GitHub. -&gt;
+									View on GitHub.
+									<IconImports.FontAwesomeIcon
+										icon={IconImports.faArrowUpRightFromSquare}
+										size="sm"
+										className="pl-2"
+									/>
 								</Link>
 							</h2>
 						</div>
