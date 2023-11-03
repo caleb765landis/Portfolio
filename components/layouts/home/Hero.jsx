@@ -7,7 +7,7 @@ export default function Hero() {
 	return (
 		<section
 			id="hero"
-			className="h-screen bg-gradient-to-br from-secondary from-50% to-slate-400 bg-blend-multiply backdrop-blur-sm text-primary p-10 grid md:grid-cols-2 items-center justify-items-center"
+			className="min-h-screen bg-gradient-to-br from-secondary from-50% to-slate-400 bg-blend-multiply backdrop-blur-sm text-primary p-10 grid md:grid-cols-2 items-center justify-items-center"
 		>
 			<div
 				id="intro"

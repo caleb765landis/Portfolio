@@ -99,9 +99,9 @@ export default function Footer() {
 
 							<div className="hover:underline">
 								<a href="https://www.enji.dev/" target="_blank">
-									<h2 className="text-xl">Enji Dev</h2>
+									<h2 className="text-xl">Enji Kusnadi</h2>
 									<p className="text-xl font-thin pb-3">
-										Future design features and future{" "}
+										Future features like{" "}
 										<span className="italic">Today I Learned</span> page.
 									</p>
 								</a>
@@ -123,8 +123,8 @@ export default function Footer() {
 								</Link>
 							</h2>
 							<p className="text-lg font-thin pb-2">
-								Built with Next.js and Tailwind CSS. Coded in Visual Studio Code
-								and deployed on GitHub Pages.
+								Built with Next.js and Tailwind CSS. Deployed on GitHub Pages.
+								Coded in Visual Studio Code.
 							</p>
 						</div>
 					</div>
