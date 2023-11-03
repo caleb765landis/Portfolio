@@ -1,7 +1,8 @@
 import Link from "next/link";
-import * as IconImports from "/utils/iconImports";
-import FeaturedProjectsGrid from "../../components/elements/FeaturedProjectsGrid";
 
+import FeaturedProjectsGrid from "../../components/common/FeaturedProjectsGrid";
+
+// API routes for adding all projects using information from my GitHub
 // https://api.github.com/users/caleb765landis
 // https://api.github.com/users/caleb765landis/repos
 

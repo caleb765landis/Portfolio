@@ -4,7 +4,7 @@ import content from "/content/featuredProjects.json";
 export default function FeaturedProjectsGrid() {
 	return (
 		<>
-			{/* Featured Project Cards */}
+			{/* Grid of Featured Project Cards */}
 			<div className="grid grid-cols-1 md:grid-cols-2 gap-5">
 				{content.map((data, index) => {
 					const {title, description, technologies, repoLink, images, flip} =

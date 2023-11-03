@@ -1,5 +1,7 @@
 import Image from "next/image";
-import SecondaryButton from "@/components/elements/SecondaryButton";
+
+import SecondaryButton from "@/components/common/SecondaryButton";
+
 import * as IconImports from "/utils/iconImports";
 
 export default function Resume() {

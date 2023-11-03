@@ -3,8 +3,8 @@ import Link from "next/link";
 import * as IconImports from "/utils/iconImports";
 
 import {copyToClipboard} from "@/utils/copyToClipboard";
-import PrimaryButton from "../../elements/PrimaryButton";
-import SecondaryButton from "../../elements/SecondaryButton";
+import PrimaryButton from "../../common/PrimaryButton";
+import SecondaryButton from "../../common/SecondaryButton";
 
 export default function Contact({onHome = true}) {
 	return (
