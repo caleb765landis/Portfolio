@@ -15,12 +15,12 @@ export default function FeaturedProject({
 	return (
 		<>
 			{/* Featured Project Card */}
-			<div className="card border-slate-300 border-2 flex w-full min-h-fit mb-10">
+			<div className="card border-slate-300 border-2 flex mb-10">
 				{/* Grid Layout */}
-				<div className="flex md:flex-nowrap flex-wrap-reverse items-center gap-6">
+				<div className="flex md:flex-nowrap flex-wrap-reverse gap-6">
 					{/* Project Description */}
-					<div className="flex flex-col md:basis-1/2">
-						<h1 className="pb-3 text-3xl font-semibold">
+					<div className="flex flex-col">
+						<h1 className="pb-3 text-5xl font-semibold">
 							{title ? title : "Title"}
 						</h1>
 						<h2 className="pb-3 text-2xl">
@@ -28,7 +28,7 @@ export default function FeaturedProject({
 						</h2>
 
 						{/* Container for list of technologies */}
-						<div className="flex flex-col mb-6 p-4 rounded-xl bg-slate-200 shadow-lg shadow-gray-300">
+						<div className="flex flex-col grow w-full mb-6 p-4 rounded-xl bg-slate-200 shadow-lg shadow-gray-300">
 							<h1 className="text-xl font-semibold pb-2">Technologies Used</h1>
 							<div className="flex flex-wrap">
 								{technologies.map((technology) => (
@@ -53,7 +53,7 @@ export default function FeaturedProject({
 					</div>
 
 					{/* Project Image */}
-					<div
+					{/* <div
 						className={clsx("flex justify-center items-center md:basis-1/2", {
 							"order-first": flip === true,
 						})}
@@ -63,7 +63,7 @@ export default function FeaturedProject({
 							alt="Profile Photo"
 							className="project-img rounded-lg border-2 border-slate-300 shadow-lg shadow-gray-300"
 						></img>
-					</div>
+					</div> */}
 				</div>
 			</div>
 		</>

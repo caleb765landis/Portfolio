@@ -1,7 +1,7 @@
 [
     {
-        "title": "Capstone",
-        "description": "My IUPUI Computer Science Capstone Project. A full-stack iOS application that organizes your video game library through different lists.",
+        "title": "IUPUI Capstone",
+        "description": "A full-stack iOS application that organizes your video game library through different lists.",
         "technologies": [
             {"icon": "", "name": "Swift"},
             {"icon": "", "name": "SwiftUI"},
@@ -23,6 +23,21 @@
         "flip": false
     },
     {
+        "title": "CLI Calculator",
+        "description": "A command-line calculator application in C++ that demonstrates eight crucial software design patterns.",
+        "technologies": [
+            {"icon": "", "name": "C++"},
+            {"icon": "", "name": "Makefile Project Creator"},
+            {"icon": "", "name": "Git"}
+        ],
+        "repoLink": "https://github.com/caleb765landis/Software-Design-Pattern-Calculator",
+        "images": { 
+            "small": null,
+            "medium": {"imgPath": "/images/Profile_Photo.jpg", "alt": "Profile Photo"}
+        },
+        "flip": false
+    },
+    {
         "title": "Wicked West",
         "description": "A top-down shooter developed in the Unity 3D game engine.",
         "technologies": [
@@ -39,21 +54,6 @@
         "flip": true
     },
     {
-        "title": "Over-Engineered Calculator",
-        "description": "A command-line calculator application in C++ that demonstrates 8 crucial software design patterns.",
-        "technologies": [
-            {"icon": "", "name": "C++"},
-            {"icon": "", "name": "Makefile Project Creator"},
-            {"icon": "", "name": "Git"}
-        ],
-        "repoLink": "https://github.com/caleb765landis/Software-Design-Pattern-Calculator",
-        "images": { 
-            "small": null,
-            "medium": {"imgPath": "/images/Profile_Photo.jpg", "alt": "Profile Photo"}
-        },
-        "flip": false
-    },
-    {
         "title": "Portfolio Website",
         "description": "My personal portfolio website built with Next.js and styled with Tailwind CSS.",
         "technologies": [
@@ -63,7 +63,7 @@
             {"icon": "", "name": "npm"},
             {"icon": "", "name": "Git"}
         ],
-        "repoLink": "https://github.com/caleb765landis",
+        "repoLink": "https://github.com/caleb765landis/Portfolio",
         "images": { 
             "small": null,
             "medium": {"imgPath": "/images/Profile_Photo.jpg", "alt": "Profile Photo"}

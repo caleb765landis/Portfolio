@@ -36,7 +36,7 @@ export default function Projects() {
 
 				{/* TODO: Add key and names */}
 				{/* Featured Project Cards */}
-				<div className="flex flex-col items-center">
+				<div className="grid grid-cols-1 md:grid-cols-2 gap-5">
 					{content.map((data, index) => {
 						const {title, description, technologies, repoLink, images, flip} =
 							data;
