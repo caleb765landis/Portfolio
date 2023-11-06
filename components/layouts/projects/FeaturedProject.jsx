@@ -1,5 +1,5 @@
-import PrimaryButton from "./PrimaryButton";
-import Badge from "./Badge";
+import PrimaryButton from "../../common/PrimaryButton";
+import Badge from "../../common/Badge";
 
 import * as IconImports from "/utils/iconImports";
 

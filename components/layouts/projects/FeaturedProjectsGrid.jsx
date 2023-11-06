@@ -18,6 +18,7 @@ export default function FeaturedProjectsGrid() {
 							link={repoLink}
 							imgPath={images.medium.imgPath}
 							flip={flip}
+							key={index}
 						/>
 					);
 				})}

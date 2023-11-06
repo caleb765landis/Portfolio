@@ -37,7 +37,6 @@ function Contact() {
 						See my resume.
 						<IconImports.FontAwesomeIcon
 							icon={IconImports.faFileLines}
-							size=""
 							className="pl-2"
 						/>
 					</Link>

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import * as IconImports from "/utils/iconImports";
-import FeaturedProjectsGrid from "../../common/FeaturedProjectsGrid";
+import FeaturedProjectsGrid from "../projects/FeaturedProjectsGrid";
 
 export default function Projects() {
 	return (

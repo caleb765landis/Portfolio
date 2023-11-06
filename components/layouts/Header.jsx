@@ -8,7 +8,11 @@ export default function Header() {
 
 	return (
 		<header className="flex justify-between items-center px-5 py-2 bg-primary sticky top-0 w-full z-10">
-			<Link href="../" className="logo text-2xl font-bold">
+			<Link
+				onClick={toggle ? handleToggle : null}
+				href="../"
+				className="logo text-2xl font-bold"
+			>
 				Caleb Landis
 			</Link>
 
