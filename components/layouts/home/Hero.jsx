@@ -25,7 +25,7 @@ function Introduction() {
 			id="intro"
 			className="grid grid-cols-1 justify-items-left order-last md:order-first"
 		>
-			<div className="pb-5">
+			<h1 className="pb-5">
 				<span className="block text-4xl md:text-5xl">Hello! My name is</span>
 				<span className="block text-8xl md:text-9xl font-bold pb-1">
 					Caleb
@@ -35,7 +35,7 @@ function Introduction() {
 				<span className="block text-3xl md:text-4xl">
 					Welcome to my portfolio.
 				</span>
-			</div>
+			</h1>
 
 			<IntroButtons />
 		</div>
