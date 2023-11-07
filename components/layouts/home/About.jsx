@@ -38,9 +38,9 @@ function Introduction() {
 
 function PhotoSkillsGrid() {
 	return (
-		<div className="grid md:grid-rows-2 md:grid-cols-2 md:gap-5 gap-8">
+		<div className="grid md:grid-cols-2 md:gap-5 gap-8">
 			{/* Portrait Photo */}
-			<div id="aboutPic" className="row-span-2">
+			<div id="aboutPic" className="row-span-2 flex items-center">
 				<img
 					src="/images/About_Photo.jpeg"
 					alt="About Photo"
