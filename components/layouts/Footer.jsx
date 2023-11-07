@@ -146,8 +146,8 @@ function SourceCode() {
 					</Link>
 				</h2>
 				<p className="text-lg font-thin pb-2">
-					Built with Next.js and Tailwind CSS. Deployed on GitHub Pages. Coded
-					in Visual Studio Code.
+					Built with Next.js and Tailwind CSS. Deployed on Vercel. Coded in
+					Visual Studio Code.
 				</p>
 			</div>
 		</div>
