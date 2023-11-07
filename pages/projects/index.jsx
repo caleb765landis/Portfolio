@@ -20,19 +20,21 @@ export default function Projects() {
 
 function FeaturedProjectsSection() {
 	return (
-		<section
-			id="featured"
-			className="min-h-screen bg-secondary text-accent flex flex-wrap flex-col md:p-20 p-10"
-		>
-			{/* Heading Section */}
-			<div className="flex flex-col text-center pb-10 items-center">
-				<div className="text-6xl font-semibold mt-8 p-5">
-					<h1>Featured Projects</h1>
+		<section className="bg-secondary text-accent flex justify-center">
+			<div
+				id="featured"
+				className="min-h-screen max-w-screen-xl flex flex-wrap flex-col md:p-20 p-10"
+			>
+				{/* Heading Section */}
+				<div className="flex flex-col text-center pb-10 items-center">
+					<div className="text-6xl font-semibold mt-8 p-5">
+						<h1>Featured Projects</h1>
+					</div>
 				</div>
-			</div>
 
-			{/* Featured Project Cards */}
-			<FeaturedProjectsGrid />
+				{/* Featured Project Cards */}
+				<FeaturedProjectsGrid />
+			</div>
 		</section>
 	);
 }

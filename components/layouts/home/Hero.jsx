@@ -7,12 +7,14 @@ import * as IconImports from "/utils/iconImports";
 
 export default function Hero() {
 	return (
-		<section
-			id="hero"
-			className="min-h-screen bg-gradient-to-br from-secondary from-50% to-slate-400 bg-blend-multiply backdrop-blur-sm text-primary p-10 grid md:grid-cols-2 items-center justify-items-center"
-		>
-			<Introduction />
-			<HeroPhoto />
+		<section className="flex justify-center bg-gradient-to-br from-secondary from-50% to-slate-400 bg-blend-multiply backdrop-blur-sm text-primary">
+			<div
+				id="hero"
+				className="min-h-screen max-w-screen-xl p-10 grid md:grid-cols-2 items-center justify-items-center"
+			>
+				<Introduction />
+				<HeroPhoto />
+			</div>
 		</section>
 	);
 }
@@ -65,7 +67,7 @@ function HeroPhoto() {
 				{/* Small Screen: Image Shown, Medium+ Screen: Image Hidden */}
 				<Image
 					priority
-					src="/images/profile.jpg"
+					src="/images/Profile.jpg"
 					alt="Profile Photo"
 					className="block md:hidden rounded-full border-8 border-primary shadow-lg shadow-gray-300"
 					height={400}
@@ -74,7 +76,7 @@ function HeroPhoto() {
 				{/* Medium+ Screen: Image Shown, Small Screen: Image Hidden */}
 				<Image
 					priority
-					src="/images/profile.jpg"
+					src="/images/Profile.jpg"
 					alt="Profile Photo"
 					className="hidden md:block rounded-full border-8 border-primary shadow-lg shadow-gray-300"
 					height={500}

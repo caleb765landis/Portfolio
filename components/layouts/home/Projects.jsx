@@ -4,23 +4,25 @@ import FeaturedProjectsGrid from "../projects/FeaturedProjectsGrid";
 
 export default function Projects() {
 	return (
-		<section
-			id="projects"
-			className="min-h-screen bg-secondary text-accent md:p-20 p-10 flex flex-wrap flex-col"
-		>
-			{/* Heading Section */}
-			<div className="flex flex-col text-center pb-10 items-center">
-				<div className="text-6xl font-semibold mt-8 p-5">
-					<h1>Featured Projects</h1>
+		<section className="bg-secondary text-accent flex justify-center">
+			<div
+				id="projects"
+				className="min-h-screen max-w-screen-xl md:p-20 p-10 flex flex-wrap flex-col"
+			>
+				{/* Heading Section */}
+				<div className="flex flex-col text-center pb-10 items-center">
+					<div className="text-6xl font-semibold mt-8 p-5">
+						<h1>Featured Projects</h1>
+					</div>
+					<SeeAllProjects />
 				</div>
-				<SeeAllProjects />
-			</div>
 
-			<FeaturedProjectsGrid />
+				<FeaturedProjectsGrid />
 
-			{/* Extra link to see all projects for easier navigation. */}
-			<div className="flex justify-end">
-				<SeeAllProjects />
+				{/* Extra link to see all projects for easier navigation. */}
+				<div className="flex justify-end">
+					<SeeAllProjects />
+				</div>
 			</div>
 		</section>
 	);

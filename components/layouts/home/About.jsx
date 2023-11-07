@@ -3,12 +3,14 @@ import AboutStyles from "../../../styles/components/layouts/home/About.module.cs
 
 export default function About() {
 	return (
-		<section
-			id="about"
-			className="min-h-screen md:p-20 p-10 flex flex-wrap justify-center"
-		>
-			<Introduction />
-			<PhotoSkillsGrid />
+		<section className="flex justify-center">
+			<div
+				id="about"
+				className="min-h-screen max-w-screen-xl md:p-20 p-10 flex flex-wrap justify-center justify-self-center"
+			>
+				<Introduction />
+				<PhotoSkillsGrid />
+			</div>
 		</section>
 	);
 }
@@ -19,7 +21,7 @@ function Introduction() {
 			<div className="flex justify-center text-6xl font-semibold pb-10">
 				<h1>About Me</h1>
 			</div>
-			<div className="flex justify-center md:text-center text-xl pb-10">
+			<div className="flex justify-center md:text-center text-2xl pb-10">
 				<p>
 					I just recently graduated from IUPUI with a B.A. in Applied Computer
 					Science and a minor in Game Design & Development. I've spent time as a

@@ -10,10 +10,12 @@ export default function Footer() {
 			{/* Footer Section */}
 			<footer className="p-10">
 				{/* Content */}
-				<div className="flex flex-col md:flex-row items-center md:items-start text-center">
-					<Contact />
-					<Inspiration />
-					<SourceCode />
+				<div className="flex justify-center items-center">
+					<div className="max-w-screen-xl flex flex-col md:flex-row items-center md:items-start text-center">
+						<Contact />
+						<Inspiration />
+						<SourceCode />
+					</div>
 				</div>
 
 				<hr />
