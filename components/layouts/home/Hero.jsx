@@ -67,7 +67,7 @@ function HeroPhoto() {
 				{/* Small Screen: Image Shown, Medium+ Screen: Image Hidden */}
 				<Image
 					priority
-					src="/images/Profile.jpg"
+					src="/images/profile.jpg"
 					alt="Profile Photo"
 					className="block md:hidden rounded-full border-8 border-primary shadow-lg shadow-gray-300"
 					height={400}
@@ -76,7 +76,7 @@ function HeroPhoto() {
 				{/* Medium+ Screen: Image Shown, Small Screen: Image Hidden */}
 				<Image
 					priority
-					src="/images/Profile.jpg"
+					src="/images/profile.jpg"
 					alt="Profile Photo"
 					className="hidden md:block rounded-full border-8 border-primary shadow-lg shadow-gray-300"
 					height={500}
