@@ -75,14 +75,18 @@ export default function Contact({onHome = true}) {
 
 							{/* Use this form for sending actual email submissions. */}
 							{/* Currently has a limit of 50 form submissions each month, so I'll use the other form tag until website is ready to publish. */}
-							{/* <form className="text-xl" action="https://getform.io/f/f28cd6d6-be8e-4fa6-9910-39bf349fe147" method="POST"> */}
-
 							<form
+								className="text-xl"
+								action="https://getform.io/f/f28cd6d6-be8e-4fa6-9910-39bf349fe147"
+								method="POST"
+							>
+								{/* Use this form for testing purposes. */}
+								{/* <form
 								className="text-xl"
 								action="mailto:caleb765landis@gmail.com"
 								method="post"
 								encType="text/plain"
-							>
+							> */}
 								{/* Full Name */}
 								<label className="block pb-2">
 									<span className="font-semibold">Full Name</span>
