@@ -8,7 +8,7 @@ My personal portfolio website. Built with Next.js and Tailwind CSS. Deployed on 
 
 ### Deployed on Vercel
 
-This website was deployed on Vercel and viewable publicly at [this link](https://portfolio-caleb765landis.vercel.app/).
+This website is deployed on Vercel and is publicly viewable at [this link](https://portfolio-caleb765landis.vercel.app/).
 
 ### Locally
 
