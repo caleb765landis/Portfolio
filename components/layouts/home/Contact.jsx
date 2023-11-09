@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import * as IconImports from "/utils/iconImports";
-
+import settings from "/_settings.json";
 import {copyToClipboard} from "@/utils/copyToClipboard";
 import PrimaryButton from "../../common/PrimaryButton";
 import SecondaryButton from "../../common/SecondaryButton";
@@ -77,7 +77,7 @@ export default function Contact({onHome = true}) {
 							{/* Currently has a limit of 50 form submissions each month, so I'll use the other form tag until website is ready to publish. */}
 							<form
 								className="text-xl"
-								action="https://getform.io/f/f28cd6d6-be8e-4fa6-9910-39bf349fe147"
+								action={settings.getform.link}
 								method="POST"
 							>
 								{/* Use this form for testing purposes. */}
