@@ -66,30 +66,33 @@ function AllProjectsSection({user, repos}) {
 
 function GithHubProfileSection({user}) {
 	return (
-		<div className="flex flex-row mb-10">
-			<Image
-				className="rounded-full"
-				src={user[0].avatar_url}
-				alt="Github Profile Photo"
-				height={60}
-				width={60}
-			/>
-			<span class="pl-5">
-				<p className="text-xl font-bold">{user[0].name}</p>
-				<a
-					href={user[0].html_url}
-					rel="noreferrer"
-					target="_blank"
-					className="font-thin"
-				>
-					{user[0].html_url}
-					<IconImports.FontAwesomeIcon
-						icon={IconImports.faArrowUpRightFromSquare}
-						size="sm"
-						className="pl-2"
-					/>
-				</a>
-			</span>
+		<div>
+			<h1 className="font-bold text-3xl mb-5">GitHub Repositories</h1>
+			<div className="flex flex-row mb-10">
+				<Image
+					className="rounded-full"
+					src={user[0].avatar_url}
+					alt="Github Profile Photo"
+					height={60}
+					width={60}
+				/>
+				<span class="pl-5">
+					<p className="text-xl font-bold">{user[0].name}</p>
+					<a
+						href={user[0].html_url}
+						rel="noreferrer"
+						target="_blank"
+						className="font-extralight"
+					>
+						{user[0].html_url}
+						<IconImports.FontAwesomeIcon
+							icon={IconImports.faArrowUpRightFromSquare}
+							size="xs"
+							className="pl-2"
+						/>
+					</a>
+				</span>
+			</div>
 		</div>
 	);
 }
@@ -154,18 +157,15 @@ export async function getServerSideProps({res}) {
 
 		repos.sort((a, b) => b.timestamp - a.timestamp);
 
-		repos = repos.filter((e, i) => {
-			if (i < 8 && !e.topics.includes("github-config")) return e;
-			return false;
-		});
+		// repos = repos.filter((e, i) => {
+		// 	if (i < 8 && !e.topics.includes("github-config")) return e;
+		// 	return false;
+		// });
 	}
 
 	if (!repos || !user) {
 		return {notFound: true};
 	}
-
-	console.log(user);
-	console.log(repos);
 
 	return {props: {user, repos}};
 }

@@ -44,7 +44,7 @@ function Contact() {
 					</Link>
 				</h2>
 
-				<h2 className="text-xl pb-5">
+				<h2 className="text-xl pb-5 font-extralight">
 					<span className="font-semibold">Email:</span> caleb765landis@gmail.com
 				</h2>
 
@@ -94,7 +94,7 @@ function Inspiration() {
 					<div className="hover:underline">
 						<a href="https://www.andrewnelson.net/" target="_blank">
 							<h2 className="text-xl">Andrew Nelson</h2>
-							<p className="text-xl font-thin pb-3">Theme and layouts.</p>
+							<p className="text-xl font-extralight pb-3">Theme and layouts.</p>
 						</a>
 					</div>
 
@@ -104,14 +104,16 @@ function Inspiration() {
 							target="_blank"
 						>
 							<h2 className="text-xl">Amrin</h2>
-							<p className="text-xl font-thin pb-3">Structuring and layouts.</p>
+							<p className="text-xl font-extralight pb-3">
+								Structuring and layouts.
+							</p>
 						</a>
 					</div>
 
 					<div className="hover:underline">
 						<a href="https://theodorusclarence.com/" target="_blank">
 							<h2 className="text-xl">Theodorus Clarence</h2>
-							<p className="text-xl font-thin pb-3">
+							<p className="text-xl font-extralight pb-3">
 								Future re-styling and colors.
 							</p>
 						</a>
@@ -120,7 +122,7 @@ function Inspiration() {
 					<div className="hover:underline">
 						<a href="https://www.enji.dev/" target="_blank">
 							<h2 className="text-xl">Enji Kusnadi</h2>
-							<p className="text-xl font-thin pb-3">
+							<p className="text-xl font-extralight pb-3">
 								Future features like{" "}
 								<span className="italic">Today I Learned</span> page.
 							</p>
@@ -147,7 +149,7 @@ function SourceCode() {
 						/>
 					</Link>
 				</h2>
-				<p className="text-lg font-thin pb-2">
+				<p className="text-xl font-extralight pb-2">
 					Built with Next.js and Tailwind CSS. Deployed on Vercel. Coded in
 					Visual Studio Code.
 				</p>
