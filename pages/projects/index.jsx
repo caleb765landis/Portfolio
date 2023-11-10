@@ -147,10 +147,23 @@ export async function getServerSideProps({res}) {
 				topics,
 			}) => {
 				const timestamp = Math.floor(new Date(pushed_at) / 1000);
+
+				var languageIcon = "";
 				if (language == "HTML") {
-					language = "HTML5";
+					languageIcon = "devicon-html5-plain";
+				} else if (language == "C++") {
+					languageIcon = "devicon-cplusplus-plain";
+				} else if (language == "C#") {
+					languageIcon = "devicon-csharp-plain";
+				} else if (language == "PLSQL") {
+					languageIcon = "devicon-oracle-plain";
+				} else {
+					languageIcon =
+						"devicon-" + (language ? language.toLowerCase() : "") + "-plain";
 				}
-				console.log(language);
+
+				// languageIcon += " colored"; // leave uncommented if icons should be colored
+
 				return {
 					name,
 					fork,
@@ -158,6 +171,7 @@ export async function getServerSideProps({res}) {
 					forks_count,
 					html_url,
 					language,
+					languageIcon,
 					watchers,
 					default_branch,
 					homepage,
@@ -169,11 +183,6 @@ export async function getServerSideProps({res}) {
 		);
 
 		repos.sort((a, b) => b.timestamp - a.timestamp);
-
-		// repos = repos.filter((e, i) => {
-		// 	if (i < 8 && !e.topics.includes("github-config")) return e;
-		// 	return false;
-		// });
 
 		repos = repos.filter((e) => {
 			if (!(e.name == settings.username.github)) return e;

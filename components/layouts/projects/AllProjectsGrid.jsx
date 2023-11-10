@@ -15,6 +15,7 @@ export default function AllProjectsGrid({repos}) {
 							forks_count,
 							html_url,
 							language,
+							languageIcon,
 							watchers,
 							homepage,
 							pushed_at,
@@ -23,7 +24,8 @@ export default function AllProjectsGrid({repos}) {
 					) => {
 						const date = new Date(pushed_at).toDateString();
 						return (
-							<div className="border-b-2 border-white px-3 py-6">
+							// <div className="border-b-2 border-white px-3 py-6">
+							<div className="px-3 py-6">
 								<div key={index} className="">
 									<div className="pb-2">
 										<span className="flex justify-between">
@@ -55,9 +57,7 @@ export default function AllProjectsGrid({repos}) {
 
 									<span className="flex flex-row text-xl font-bold">
 										<p className="pr-2 flex flex-row">
-											<i
-												className={`devicon-${language.toLowerCase()}-plain colored pr-2 flex items-center`}
-											/>
+											<i className={`${languageIcon} pr-2 flex items-center`} />
 											<p>{language}</p>
 										</p>
 										<p className="px-2">
