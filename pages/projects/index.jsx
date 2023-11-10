@@ -10,6 +10,10 @@ import AllProjectsGrid from "../../components/layouts/projects/AllProjectsGrid";
 // https://api.github.com/users/caleb765landis
 // https://api.github.com/users/caleb765landis/repos
 
+// for testing without making requests
+import reposData from "/content/repos.json";
+import userData from "/content/user.json";
+
 export default function Projects({user, repos}) {
 	return (
 		<>
@@ -46,7 +50,7 @@ function AllProjectsSection({user, repos}) {
 	return (
 		<section id="all" className="bg-accent text-white flex justify-center">
 			{/* Content */}
-			<div className="max-w-screen-xl flex-wrap flex-col md:p-20 p-10">
+			<div className="max-w-screen-lg flex-wrap flex-col md:p-20 p-10">
 				{/* Heading Section */}
 				<div className="flex flex-col text-center pb-10 items-center">
 					<div className="text-6xl font-semibold p-5">
@@ -68,15 +72,15 @@ function GithHubProfileSection({user}) {
 	return (
 		<div>
 			<h1 className="font-bold text-3xl mb-5">GitHub Repositories</h1>
-			<div className="flex flex-row mb-10">
+			<div className="border-b-2 border-white flex flex-row pb-10">
 				<Image
-					className="rounded-full"
+					className="rounded-full mr-5"
 					src={user[0].avatar_url}
 					alt="Github Profile Photo"
 					height={60}
 					width={60}
 				/>
-				<span class="pl-5">
+				<span>
 					<p className="text-xl font-bold">{user[0].name}</p>
 					<a
 						href={user[0].html_url}
@@ -98,20 +102,24 @@ function GithHubProfileSection({user}) {
 }
 
 export async function getServerSideProps({res}) {
-	res.setHeader(
-		"Cache-Control",
-		"public, s-maxage=600, stale-while-revalidate=59"
-	);
+	// res.setHeader(
+	// 	"Cache-Control",
+	// 	"public, s-maxage=600, stale-while-revalidate=59"
+	// );
 
-	const [gitUserRes, gitReposRes] = await Promise.all([
-		fetch(`https://api.github.com/users/${settings.username.github}`),
-		fetch(`https://api.github.com/users/${settings.username.github}/repos`),
-	]);
+	// const [gitUserRes, gitReposRes] = await Promise.all([
+	// 	fetch(`https://api.github.com/users/${settings.username.github}`),
+	// 	fetch(`https://api.github.com/users/${settings.username.github}/repos`),
+	// ]);
 
-	let [user, repos] = await Promise.all([
-		gitUserRes.json(),
-		gitReposRes.json(),
-	]);
+	// let [user, repos] = await Promise.all([
+	// 	gitUserRes.json(),
+	// 	gitReposRes.json(),
+	// ]);
+
+	// assign variables to test json data
+	let user = userData;
+	let repos = reposData;
 
 	if (user.login) {
 		user = [user].map(({login, name, avatar_url, html_url}) => ({
@@ -120,6 +128,7 @@ export async function getServerSideProps({res}) {
 			avatar_url,
 			html_url,
 		}));
+		console.log(user[0].avatar_url);
 	}
 
 	if (repos.length) {
@@ -138,6 +147,10 @@ export async function getServerSideProps({res}) {
 				topics,
 			}) => {
 				const timestamp = Math.floor(new Date(pushed_at) / 1000);
+				if (language == "HTML") {
+					language = "HTML5";
+				}
+				console.log(language);
 				return {
 					name,
 					fork,
@@ -161,6 +174,11 @@ export async function getServerSideProps({res}) {
 		// 	if (i < 8 && !e.topics.includes("github-config")) return e;
 		// 	return false;
 		// });
+
+		repos = repos.filter((e) => {
+			if (!(e.name == settings.username.github)) return e;
+			return false;
+		});
 	}
 
 	if (!repos || !user) {
