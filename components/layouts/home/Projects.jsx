@@ -33,7 +33,7 @@ function SeeAllProjects() {
 		<>
 			<div>
 				<Link
-					href="../../projects/"
+					href="../../projects/#all"
 					className="text-accentSecondary hover:text-accent"
 				>
 					See All Projects.

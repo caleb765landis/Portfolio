@@ -162,7 +162,7 @@ export async function getServerSideProps({res}) {
 						"devicon-" + (language ? language.toLowerCase() : "") + "-plain";
 				}
 
-				// languageIcon += " colored"; // leave uncommented if icons should be colored
+				languageIcon += " colored"; // leave uncommented if icons should be colored
 
 				return {
 					name,

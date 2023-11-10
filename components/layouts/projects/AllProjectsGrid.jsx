@@ -24,7 +24,6 @@ export default function AllProjectsGrid({repos}) {
 					) => {
 						const date = new Date(pushed_at).toDateString();
 						return (
-							// <div className="border-b-2 border-white px-3 py-6">
 							<div className="px-3 py-6">
 								<div key={index} className="">
 									<div className="pb-2">
