@@ -1,8 +1,15 @@
 {
+    "sourceRepo": "http://www.github.com/caleb765landis/Portfolio/",
+    "email": "caleb765landis@gmail.com",
     "username": {
-        "github": "caleb765landis"
+        "github": "caleb765landis",
+        "linkedin": "caleb765landis"
+    },
+    "github": {
+        "useAPI": false
     },
     "getform": {
+        "useAPI": true,
         "link": "https://getform.io/f/f28cd6d6-be8e-4fa6-9910-39bf349fe147"
     }
 }

@@ -6,6 +6,7 @@ export default function PrimaryButton({
 	text,
 	icon,
 	type,
+	onSubmit = null,
 	download = false,
 	downloadPath = "/images/profile.jpg",
 }) {
@@ -29,6 +30,7 @@ export default function PrimaryButton({
 			<div>
 				<button
 					type={type}
+					onSubmit={onSubmit}
 					className="button-primary shadow-lg shadow-gray-300"
 				>
 					{componentToRender}

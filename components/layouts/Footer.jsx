@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import settings from "/_settings.json";
 import {copyToClipboard} from "@/utils/copyToClipboard";
 
 import * as IconImports from "/utils/iconImports";
@@ -50,7 +51,9 @@ function Contact() {
 
 				{/* Icons */}
 				<div className="flex flex-row">
-					<a href="https://linkedin.com/in/caleb765landis/">
+					<a
+						href={"https://linkedin.com/in/" + settings.username.linkedin + "/"}
+					>
 						<IconImports.FontAwesomeIcon
 							icon={IconImports.faLinkedin}
 							size="2x"
@@ -58,7 +61,7 @@ function Contact() {
 						/>
 					</a>
 
-					<a href="https://github.com/caleb765landis">
+					<a href={"https://github.com/" + settings.username.github}>
 						<IconImports.FontAwesomeIcon
 							icon={IconImports.faGithub}
 							size="2x"
@@ -66,10 +69,7 @@ function Contact() {
 						/>
 					</a>
 
-					<div
-						className="px-5"
-						onClick={() => copyToClipboard("caleb765landis@gmail.com")}
-					>
+					<div className="px-5" onClick={() => copyToClipboard(settings.email)}>
 						<IconImports.FontAwesomeIcon
 							icon={IconImports.faEnvelope}
 							size="2x"
@@ -140,7 +140,7 @@ function SourceCode() {
 			<div className="flex flex-col">
 				<h1 className="text-2xl font-semibold pb-4">Source Code</h1>
 				<h2 className="text-xl pb-2 hover:underline">
-					<Link href="http://www.github.com/caleb765landis/Portfolio/">
+					<Link href={settings.sourceRepo}>
 						View on GitHub.
 						<IconImports.FontAwesomeIcon
 							icon={IconImports.faArrowUpRightFromSquare}

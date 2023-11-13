@@ -102,24 +102,29 @@ function GithHubProfileSection({user}) {
 }
 
 export async function getServerSideProps({res}) {
-	// res.setHeader(
-	// 	"Cache-Control",
-	// 	"public, s-maxage=600, stale-while-revalidate=59"
-	// );
+	var user = null;
+	var repos = null;
 
-	// const [gitUserRes, gitReposRes] = await Promise.all([
-	// 	fetch(`https://api.github.com/users/${settings.username.github}`),
-	// 	fetch(`https://api.github.com/users/${settings.username.github}/repos`),
-	// ]);
+	if (settings.github.useAPI) {
+		res.setHeader(
+			"Cache-Control",
+			"public, s-maxage=600, stale-while-revalidate=59"
+		);
 
-	// let [user, repos] = await Promise.all([
-	// 	gitUserRes.json(),
-	// 	gitReposRes.json(),
-	// ]);
+		const [gitUserRes, gitReposRes] = await Promise.all([
+			fetch(`https://api.github.com/users/${settings.username.github}`),
+			fetch(`https://api.github.com/users/${settings.username.github}/repos`),
+		]);
 
-	// assign variables to test json data
-	let user = userData;
-	let repos = reposData;
+		let [user, repos] = await Promise.all([
+			gitUserRes.json(),
+			gitReposRes.json(),
+		]);
+	} else {
+		// assign variables to test json data
+		user = userData;
+		repos = reposData;
+	}
 
 	if (user.login) {
 		user = [user].map(({login, name, avatar_url, html_url}) => ({
