@@ -16,7 +16,7 @@ export default function FeaturedProject({
 	return (
 		<>
 			{/* Featured Project Card */}
-			<div className="card border-slate-300 border-2 flex mb-10">
+			<div className="card border-slate-300 border-2 flex ">
 				{/* Card Layout */}
 				<div className="flex md:flex-nowrap flex-wrap-reverse gap-6">
 					{/* Project Description */}

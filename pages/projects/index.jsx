@@ -30,14 +30,12 @@ function FeaturedProjectsSection() {
 		<section className="bg-secondary text-accent flex justify-center">
 			<div
 				id="featured"
-				className="min-h-screen max-w-screen-xl flex flex-wrap flex-col md:p-20 p-10"
+				className="max-w-screen-xl flex flex-wrap flex-col md:p-20 px-10 py-8"
 			>
 				{/* Heading Section */}
-				<div className="flex flex-col text-center pb-10 items-center">
-					<div className="text-6xl font-semibold mt-8 p-5">
-						<h1>Featured Projects</h1>
-					</div>
-				</div>
+				<h1 className="text-center text-6xl font-semibold md:mb-12 mb-8">
+					Featured Projects
+				</h1>
 
 				{/* Featured Project Cards */}
 				<FeaturedProjectsGrid />
@@ -50,13 +48,11 @@ function AllProjectsSection({user, repos}) {
 	return (
 		<section id="all" className="bg-accent text-white flex justify-center">
 			{/* Content */}
-			<div className="max-w-screen-lg flex-wrap flex-col md:p-20 p-10">
+			<div className="max-w-screen-lg flex-wrap flex-col md:p-20 p-8">
 				{/* Heading Section */}
-				<div className="flex flex-col text-center pb-10 items-center">
-					<div className="text-6xl font-semibold p-5">
-						<h1>All Projects</h1>
-					</div>
-				</div>
+				<h1 className="text-center text-6xl font-semibold md:pb-12 pb-8">
+					All Projects
+				</h1>
 
 				{/* Profile Section */}
 				<GithHubProfileSection user={user} />
@@ -71,10 +67,12 @@ function AllProjectsSection({user, repos}) {
 function GithHubProfileSection({user}) {
 	return (
 		<div>
-			<h1 className="font-bold text-3xl mb-5">GitHub Repositories</h1>
-			<div className="border-b-2 border-white flex flex-row pb-10">
+			<h1 className="font-bold text-3xl text-center md:text-start md:mb-5 mb-2">
+				GitHub Repositories
+			</h1>
+			<div className="border-b-2 border-white flex flex-col md:flex-row items-center md:justify-start text-center md:text-start pb-5 md:pb-10 md:mb-0 mb-4">
 				<Image
-					className="rounded-full mr-5"
+					className="rounded-full mb-2 md:mb-0 md:mr-5"
 					src={user[0].avatar_url}
 					alt="Github Profile Photo"
 					height={60}
@@ -106,6 +104,8 @@ export async function getServerSideProps({res}) {
 	var repos = null;
 
 	if (settings.github.useAPI) {
+		// TODO: api has request limit so I need to add auth to reequests to get higher limit
+
 		res.setHeader(
 			"Cache-Control",
 			"public, s-maxage=600, stale-while-revalidate=59"

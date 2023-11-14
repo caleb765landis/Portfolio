@@ -24,33 +24,15 @@ export default function AllProjectsGrid({repos}) {
 					) => {
 						const date = new Date(pushed_at).toDateString();
 						return (
-							<div className="px-3 py-6">
+							<div className="px-3 md:py-6 py-4">
 								<div key={index} className="">
-									<div className="pb-2">
-										<span className="flex justify-between">
-											<a
-												href={html_url}
-												rel="noreferrer"
-												target="_blank"
-												className="text-2xl font-bold hover:underline"
-											>
-												{name}
-												<IconImports.FontAwesomeIcon
-													icon={IconImports.faArrowUpRightFromSquare}
-													size="xs"
-													className="pl-2"
-												/>
-											</a>
-											{/* <p className="text-xl font-extralight">{homepage}</p> */}
-											<p className="text-xl font-extralight">{date}</p>
-										</span>
-										{/* <p className="text-md font-extralight">{date}</p> */}
-										<p className="text-md font-extralight">{homepage}</p>
-									</div>
-
-									<div className="pb-2 max-w-lg">
-										<p className="">{description}</p>
-									</div>
+									<Content
+										html_url={html_url}
+										name={name}
+										date={date}
+										homepage={homepage}
+										description={description}
+									/>
 
 									<TopicsList topics={topics} />
 
@@ -83,6 +65,41 @@ export default function AllProjectsGrid({repos}) {
 				)}
 			</div>
 		</div>
+	);
+}
+
+function Content({html_url, name, date, homepage, description}) {
+	return (
+		<>
+			<div className="pb-2">
+				<span className="flex flex-col md:flex-row md:justify-between">
+					<a
+						href={html_url}
+						rel="noreferrer"
+						target="_blank"
+						className="text-2xl font-bold hover:underline"
+					>
+						{name}
+						<IconImports.FontAwesomeIcon
+							icon={IconImports.faArrowUpRightFromSquare}
+							size="xs"
+							className="pl-2"
+						/>
+					</a>
+					<p className="text-xl font-extralight">{date}</p>
+				</span>
+				<a
+					href={homepage}
+					className="md:text-md text-sm font-extralight hover:underline"
+				>
+					{homepage}
+				</a>
+			</div>
+
+			<div className="pb-2 max-w-lg">
+				<p className="">{description}</p>
+			</div>
+		</>
 	);
 }
 
