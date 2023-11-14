@@ -106,8 +106,6 @@ export async function getServerSideProps({res}) {
 	const token = process.env.PORTFOLIO_GITHUB_BEARER;
 
 	if (settings.github.useAPI) {
-		// TODO: api has request limit so I need to add auth to reequests to get higher limit
-
 		try {
 			res.setHeader(
 				"Cache-Control",
