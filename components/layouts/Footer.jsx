@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import settings from "/_settings.json";
 import {copyToClipboard} from "@/utils/copyToClipboard";
 
 import * as IconImports from "/utils/iconImports";
@@ -44,13 +45,15 @@ function Contact() {
 					</Link>
 				</h2>
 
-				<h2 className="text-xl pb-5">
+				<h2 className="text-xl pb-5 font-extralight">
 					<span className="font-semibold">Email:</span> caleb765landis@gmail.com
 				</h2>
 
 				{/* Icons */}
 				<div className="flex flex-row">
-					<a href="https://linkedin.com/in/caleb765landis/">
+					<a
+						href={"https://linkedin.com/in/" + settings.username.linkedin + "/"}
+					>
 						<IconImports.FontAwesomeIcon
 							icon={IconImports.faLinkedin}
 							size="2x"
@@ -58,7 +61,7 @@ function Contact() {
 						/>
 					</a>
 
-					<a href="https://github.com/caleb765landis">
+					<a href={"https://github.com/" + settings.username.github}>
 						<IconImports.FontAwesomeIcon
 							icon={IconImports.faGithub}
 							size="2x"
@@ -66,10 +69,7 @@ function Contact() {
 						/>
 					</a>
 
-					<div
-						className="px-5"
-						onClick={() => copyToClipboard("caleb765landis@gmail.com")}
-					>
+					<div className="px-5" onClick={() => copyToClipboard(settings.email)}>
 						<IconImports.FontAwesomeIcon
 							icon={IconImports.faEnvelope}
 							size="2x"
@@ -94,7 +94,7 @@ function Inspiration() {
 					<div className="hover:underline">
 						<a href="https://www.andrewnelson.net/" target="_blank">
 							<h2 className="text-xl">Andrew Nelson</h2>
-							<p className="text-xl font-thin pb-3">Theme and layouts.</p>
+							<p className="text-xl font-extralight pb-3">Theme and layouts.</p>
 						</a>
 					</div>
 
@@ -104,14 +104,16 @@ function Inspiration() {
 							target="_blank"
 						>
 							<h2 className="text-xl">Amrin</h2>
-							<p className="text-xl font-thin pb-3">Structuring and layouts.</p>
+							<p className="text-xl font-extralight pb-3">
+								Structuring and layouts.
+							</p>
 						</a>
 					</div>
 
 					<div className="hover:underline">
 						<a href="https://theodorusclarence.com/" target="_blank">
 							<h2 className="text-xl">Theodorus Clarence</h2>
-							<p className="text-xl font-thin pb-3">
+							<p className="text-xl font-extralight pb-3">
 								Future re-styling and colors.
 							</p>
 						</a>
@@ -120,7 +122,7 @@ function Inspiration() {
 					<div className="hover:underline">
 						<a href="https://www.enji.dev/" target="_blank">
 							<h2 className="text-xl">Enji Kusnadi</h2>
-							<p className="text-xl font-thin pb-3">
+							<p className="text-xl font-extralight pb-3">
 								Future features like{" "}
 								<span className="italic">Today I Learned</span> page.
 							</p>
@@ -138,7 +140,7 @@ function SourceCode() {
 			<div className="flex flex-col">
 				<h1 className="text-2xl font-semibold pb-4">Source Code</h1>
 				<h2 className="text-xl pb-2 hover:underline">
-					<Link href="http://www.github.com/caleb765landis/Portfolio/">
+					<Link href={settings.sourceRepo}>
 						View on GitHub.
 						<IconImports.FontAwesomeIcon
 							icon={IconImports.faArrowUpRightFromSquare}
@@ -147,7 +149,7 @@ function SourceCode() {
 						/>
 					</Link>
 				</h2>
-				<p className="text-lg font-thin pb-2">
+				<p className="text-xl font-extralight pb-2">
 					Built with Next.js and Tailwind CSS. Deployed on Vercel. Coded in
 					Visual Studio Code.
 				</p>

@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import * as IconImports from "/utils/iconImports";
-
+import settings from "/_settings.json";
 import {copyToClipboard} from "@/utils/copyToClipboard";
 import PrimaryButton from "../../common/PrimaryButton";
 import SecondaryButton from "../../common/SecondaryButton";
@@ -37,7 +37,11 @@ export default function Contact({onHome = true}) {
 
 						{/* Icons */}
 						<div className="flex justify-center">
-							<a href="https://linkedin.com/in/caleb765landis/">
+							<a
+								href={
+									"https://linkedin.com/in/" + settings.username.linkedin + "/"
+								}
+							>
 								<IconImports.FontAwesomeIcon
 									icon={IconImports.faLinkedin}
 									size="2x"
@@ -45,7 +49,7 @@ export default function Contact({onHome = true}) {
 								/>
 							</a>
 
-							<a href="https://github.com/caleb765landis">
+							<a href={"https://github.com/" + settings.username.github}>
 								<IconImports.FontAwesomeIcon
 									icon={IconImports.faGithub}
 									size="2x"
@@ -55,7 +59,7 @@ export default function Contact({onHome = true}) {
 
 							<div
 								className="px-5"
-								onClick={() => copyToClipboard("caleb765landis@gmail.com")}
+								onClick={() => copyToClipboard(settings.email)}
 							>
 								<IconImports.FontAwesomeIcon
 									icon={IconImports.faEnvelope}
@@ -73,74 +77,90 @@ export default function Contact({onHome = true}) {
 								Send me a message.
 							</h1>
 
-							{/* Use this form for sending actual email submissions. */}
-							{/* Currently has a limit of 50 form submissions each month, so I'll use the other form tag until website is ready to publish. */}
-							<form
-								className="text-xl"
-								action="https://getform.io/f/f28cd6d6-be8e-4fa6-9910-39bf349fe147"
-								method="POST"
-							>
-								{/* Use this form for testing purposes. */}
-								{/* <form
-								className="text-xl"
-								action="mailto:caleb765landis@gmail.com"
-								method="post"
-								encType="text/plain"
-							> */}
-								{/* Full Name */}
-								<label className="block pb-2">
-									<span className="font-semibold">Full Name</span>
-									<input
-										required
-										type="text"
-										name="Full Name"
-										placeholder="John Doe"
-										className="form-input block w-full rounded-md border-2 border-gray-300 shadow-sm focus:border-accentSecondary p-2 text-lg"
-									></input>
-								</label>
-
-								{/* Email Address */}
-								<label className="block pb-2">
-									<span className="font-semibold">Email</span>
-									<input
-										required
-										type="email"
-										name="Email"
-										placeholder="john@example.com"
-										className="form-input block w-full rounded-md border-2 border-gray-300 shadow-sm focus:border-accentSecondary p-2 text-lg"
-									></input>
-								</label>
-
-								{/* Message */}
-								<label className="block pb-4">
-									<span className="font-semibold">Message</span>
-									<textarea
-										required
-										name="Message"
-										placeholder="Message"
-										className="form-textarea block w-full rounded-md border-2 border-gray-300 shadow-sm focus:border-accentSecondary p-2 text-lg"
-									></textarea>
-								</label>
-
-								{/* <button type="submit">Submit</button> */}
-
-								<div className="flex flex-row">
-									<SecondaryButton
-										text="Reset"
-										type="reset"
-										link={onHome ? "/#contact" : "/contact"}
-									/>
-									<PrimaryButton
-										text="Submit"
-										type="submit"
-										link={onHome ? "/#contact" : "/contact"}
-									/>
-								</div>
-							</form>
+							{settings.getform.useAPI ? (
+								// Use this form for sending actual email submissions.
+								// Currently has a limit of 50 form submissions each month, so I'll use the other form tag until website is ready to publish.
+								<form
+									id="contactForm"
+									className="text-xl"
+									action={settings.getform.link}
+									method="POST"
+								>
+									<FormFields onHome={onHome} />
+								</form>
+							) : (
+								// Use this form for testing purposes.
+								<form
+									id="contactForm"
+									className="text-xl"
+									action={"mailto:" + settings.email}
+									method="post"
+									encType="text/plain"
+								>
+									<FormFields onHome={onHome} />
+								</form>
+							)}
 						</div>
 					</div>
 				</div>
 			</section>
+		</>
+	);
+}
+
+function FormFields({onHome}) {
+	return (
+		<>
+			{/* Full Name */}
+			<label className="block pb-2">
+				<span className="font-semibold">Full Name</span>
+				<input
+					required
+					type="text"
+					name="Full Name"
+					placeholder="John Doe"
+					className="form-input block w-full rounded-md border-2 border-gray-300 shadow-sm focus:border-accentSecondary p-2 text-lg"
+				></input>
+			</label>
+
+			{/* Email Address */}
+			<label className="block pb-2">
+				<span className="font-semibold">Email</span>
+				<input
+					required
+					type="email"
+					name="Email"
+					placeholder="john@example.com"
+					className="form-input block w-full rounded-md border-2 border-gray-300 shadow-sm focus:border-accentSecondary p-2 text-lg"
+				></input>
+			</label>
+
+			{/* Message */}
+			<label className="block pb-4">
+				<span className="font-semibold">Message</span>
+				<textarea
+					required
+					name="Message"
+					placeholder="Message"
+					className="form-textarea block w-full rounded-md border-2 border-gray-300 shadow-sm focus:border-accentSecondary p-2 text-lg"
+				></textarea>
+			</label>
+
+			{/* <button type="submit">Submit</button> */}
+
+			<div className="flex flex-row">
+				<SecondaryButton
+					text="Reset"
+					type="reset"
+					link={onHome ? "/#contact" : "/contact"}
+				/>
+				<PrimaryButton
+					text="Submit"
+					type="submit"
+					onSubmit={() => document.getElementById("contactForm").submit()}
+					link={onHome ? "/#contact" : "/contact"}
+				/>
+			</div>
 		</>
 	);
 }
