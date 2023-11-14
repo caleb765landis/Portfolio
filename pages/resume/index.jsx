@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import SecondaryButton from "@/components/common/SecondaryButton";
+import Button from "@/components/common/Button";
 
 import * as IconImports from "/utils/iconImports";
 
@@ -15,7 +15,8 @@ export default function Resume() {
 				<div>
 					{/* Download Button */}
 					<div className="flex justify-center md:justify-end pb-2 md:pb-0">
-						<SecondaryButton
+						<Button
+							style="secondary"
 							link="/resume"
 							text="Download PDF."
 							download={true}

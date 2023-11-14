@@ -1,7 +1,6 @@
 import Image from "next/image";
 
-import PrimaryButton from "../../common/PrimaryButton";
-import SecondaryButton from "../../common/SecondaryButton";
+import Button from "../../common/Button";
 
 import * as IconImports from "/utils/iconImports";
 
@@ -45,12 +44,13 @@ function Introduction() {
 function IntroButtons() {
 	return (
 		<div className="flex flex-nowrap pb-5">
-			<PrimaryButton
+			<Button
 				link="/#about"
 				text="Get to know me."
 				// icon={IconImports.faArrowDown}
 			/>
-			<SecondaryButton
+			<Button
+				style="secondary"
 				link="/contact/"
 				text="Contact me."
 				icon={IconImports.faRightFromBracket}

@@ -1,7 +1,8 @@
 import Link from "next/link";
 import * as IconImports from "/utils/iconImports";
 
-export default function PrimaryButton({
+export default function Button({
+	style = "primary",
 	link,
 	text,
 	icon,
@@ -28,11 +29,7 @@ export default function PrimaryButton({
 	return (
 		<>
 			<div>
-				<button
-					type={type}
-					onSubmit={onSubmit}
-					className="button-primary shadow-lg shadow-gray-300"
-				>
+				<button type={type} onSubmit={onSubmit} className={"button-" + style}>
 					{componentToRender}
 				</button>
 			</div>

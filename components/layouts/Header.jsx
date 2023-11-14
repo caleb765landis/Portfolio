@@ -29,9 +29,6 @@ export default function Header() {
 						<Link href="../contact/">Contact</Link>
 					</li>
 					<li>
-						{/* <a href="#resume -link" target="_blank" rel="noreferrer">
-                            Resume
-                        </a> */}
 						<Link href="../resume/">Resume</Link>
 					</li>
 				</ul>
