@@ -112,7 +112,7 @@ function OtherInfo({languageIcon, language, watchers, forks_count}) {
 		<span className="flex flex-row text-xl font-bold">
 			<p className="pr-2 flex flex-row">
 				<i className={`${languageIcon} pr-2 flex items-center`} />
-				<p>{language}</p>
+				{language}
 			</p>
 			<p className="px-2">
 				<IconImports.FontAwesomeIcon

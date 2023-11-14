@@ -6,7 +6,7 @@
         "linkedin": "caleb765landis"
     },
     "github": {
-        "useAPI": false
+        "useAPI": true
     },
     "getform": {
         "useAPI": true,
