@@ -1,6 +1,4 @@
-import css from "../../../styles/components/layouts/projects/AllProjectsGrid.module.css";
 import * as IconImports from "/utils/iconImports";
-import Badge from "../../common/Badge";
 
 export default function AllProjectsGrid({repos}) {
 	return (
@@ -36,28 +34,12 @@ export default function AllProjectsGrid({repos}) {
 
 									<TopicsList topics={topics} />
 
-									<span className="flex flex-row text-xl font-bold">
-										<p className="pr-2 flex flex-row">
-											<i className={`${languageIcon} pr-2 flex items-center`} />
-											<p>{language}</p>
-										</p>
-										<p className="px-2">
-											<IconImports.FontAwesomeIcon
-												icon={IconImports.faStar}
-												size="sm"
-												className="pr-2"
-											/>
-											{watchers}
-										</p>
-										<p className="px-2">
-											<IconImports.FontAwesomeIcon
-												icon={IconImports.faCodeBranch}
-												size="sm"
-												className="pr-2"
-											/>
-											{forks_count}
-										</p>
-									</span>
+									<OtherInfo
+										languageIcon={languageIcon}
+										language={language}
+										watchers={watchers}
+										forks_count={forks_count}
+									/>
 								</div>
 							</div>
 						);
@@ -122,5 +104,32 @@ function TopicsList({topics}) {
 				);
 			})}
 		</div>
+	);
+}
+
+function OtherInfo({languageIcon, language, watchers, forks_count}) {
+	return (
+		<span className="flex flex-row text-xl font-bold">
+			<p className="pr-2 flex flex-row">
+				<i className={`${languageIcon} pr-2 flex items-center`} />
+				{language}
+			</p>
+			<p className="px-2">
+				<IconImports.FontAwesomeIcon
+					icon={IconImports.faStar}
+					size="sm"
+					className="pr-2"
+				/>
+				{watchers}
+			</p>
+			<p className="px-2">
+				<IconImports.FontAwesomeIcon
+					icon={IconImports.faCodeBranch}
+					size="sm"
+					className="pr-2"
+				/>
+				{forks_count}
+			</p>
+		</span>
 	);
 }

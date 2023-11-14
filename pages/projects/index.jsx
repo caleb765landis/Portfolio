@@ -103,23 +103,50 @@ export async function getServerSideProps({res}) {
 	var user = null;
 	var repos = null;
 
+	const token = process.env.PORTFOLIO_GITHUB_BEARER;
+
 	if (settings.github.useAPI) {
-		// TODO: api has request limit so I need to add auth to reequests to get higher limit
+		try {
+			res.setHeader(
+				"Cache-Control",
+				"public, s-maxage=600, stale-while-revalidate=59"
+			);
 
-		res.setHeader(
-			"Cache-Control",
-			"public, s-maxage=600, stale-while-revalidate=59"
-		);
+			const [gitUserRes, gitReposRes] = await Promise.all([
+				fetch(`https://api.github.com/users/${settings.username.github}`, {
+					headers: {Authorization: "Bearer" + token},
+				}),
+				fetch(
+					`https://api.github.com/users/${settings.username.github}/repos`,
+					{
+						headers: {Authorization: "Bearer" + token},
+					}
+				),
+			]);
 
-		const [gitUserRes, gitReposRes] = await Promise.all([
-			fetch(`https://api.github.com/users/${settings.username.github}`),
-			fetch(`https://api.github.com/users/${settings.username.github}/repos`),
-		]);
+			if (!gitUserRes.ok || !gitReposRes.ok) {
+				throw new Error(
+					"HTTP error! \ngitUserRes.status: " +
+						gitUserRes.status +
+						"\ngitReposRes.status: " +
+						gitReposRes.status
+				);
+			}
 
-		let [user, repos] = await Promise.all([
-			gitUserRes.json(),
-			gitReposRes.json(),
-		]);
+			[user, repos] = await Promise.all([
+				gitUserRes.json(),
+				gitReposRes.json(),
+			]);
+
+			// console.log(user);
+			// console.log(repos);
+		} catch (error) {
+			console.log(error);
+
+			// Use old data as a backup for list of projects if an error occurs when getting data from API
+			user = userData;
+			repos = reposData;
+		}
 	} else {
 		// assign variables to test json data
 		user = userData;

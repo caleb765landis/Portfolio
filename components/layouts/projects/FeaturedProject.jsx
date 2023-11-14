@@ -1,4 +1,4 @@
-import PrimaryButton from "../../common/PrimaryButton";
+import Button from "../../common/Button";
 import Badge from "../../common/Badge";
 
 import * as IconImports from "/utils/iconImports";
@@ -56,13 +56,11 @@ function ProjectDescription({title, description, technologies, link}) {
 			<TechnologiesContainer technologies={technologies} />
 
 			{/* View on GitHub Button */}
-			<PrimaryButton
+			<Button
 				link={link}
 				text="View on GitHub."
 				icon={IconImports.faArrowUpRightFromSquare}
 			/>
-
-			{/* TODO: "View Site" button */}
 		</div>
 	);
 }

@@ -26,11 +26,11 @@ nav li a:hover {
 
 /* buttons */
 .button-primary {
-    @apply text-white bg-primary border-2 border-primary hover:bg-accent focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700;
+    @apply text-white bg-primary border-2 border-primary hover:bg-accent focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700 shadow-lg shadow-gray-300;
 }
 
 .button-secondary {
-    @apply text-primary bg-white border-2 border-primary hover:bg-secondary focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700;
+    @apply text-primary bg-white border-2 border-primary hover:bg-secondary focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700 shadow-lg;
 }
 
 /* other elements */
@@ -45,7 +45,7 @@ nav li a:hover {
     aspect-ratio: 4/3;
 }
 
-/* color */
+/* original colors */
 /* .bg-primary {
     background: #404e4f;
 } */

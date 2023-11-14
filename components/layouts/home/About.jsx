@@ -1,6 +1,3 @@
-import Image from "next/image";
-import AboutStyles from "../../../styles/components/layouts/home/About.module.css";
-
 export default function About() {
 	return (
 		<section className="flex justify-center">
@@ -44,7 +41,7 @@ function PhotoSkillsGrid() {
 				<img
 					src="/images/About_Photo.jpeg"
 					alt="About Photo"
-					className={AboutStyles.portraitPhoto}
+					className="rounded-2xl border-2 border-slate-300 shadow-lg shadow-gray-700"
 				/>
 			</div>
 
