@@ -103,6 +103,8 @@ export async function getServerSideProps({res}) {
 	var user = null;
 	var repos = null;
 
+	const token = process.env.PORTFOLIO_GITHUB_BEARER;
+
 	if (settings.github.useAPI) {
 		// TODO: api has request limit so I need to add auth to reequests to get higher limit
 
@@ -113,13 +115,20 @@ export async function getServerSideProps({res}) {
 			);
 
 			const [gitUserRes, gitReposRes] = await Promise.all([
-				fetch(`https://api.github.com/users/${settings.username.github}`),
-				fetch(`https://api.github.com/users/${settings.username.github}/repos`),
+				fetch(`https://api.github.com/users/${settings.username.github}`, {
+					headers: {Authorization: "Bearer" + token},
+				}),
+				fetch(
+					`https://api.github.com/users/${settings.username.github}/repos`,
+					{
+						headers: {Authorization: "Bearer" + token},
+					}
+				),
 			]);
 
 			if (!gitUserRes.ok || !gitReposRes.ok) {
 				throw new Error(
-					"HTTP error! \n gitUserRes.status: " +
+					"HTTP error! \ngitUserRes.status: " +
 						gitUserRes.status +
 						"\ngitReposRes.status: " +
 						gitReposRes.status
